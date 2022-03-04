@@ -23,93 +23,93 @@ Public group moderation is on.</p>
 `,
         },
         logo: "/logo/Matrix_logo.png",
-        desktopApp: {
-          name: { ua: "", ru: "", en: "" },
-          logo: "/logo/logo-mark-primary.svg",
-          platforms: [],
-          link: "",
-          localLink: "",
-          servers: [
-            {
-              name: {
-                ua: "Web chat: Київ",
-                ru: "Веб чат: Киев",
-                en: "Web chat: Kyiv",
-              },
-              link: "https://chat.kyiv.dcomm.net.ua/",
-              docs: [
-                {
-                  name: "HTML",
-                  link: {
-                    ua: "/docs/matrix/kyiv.html",
-                    en: "/docs/matrix/kyiv.html",
-                    ru: "/docs/matrix/kyiv.html",
-                  },
-                },
-                {
-                  name: "PDF",
-                  link: {
-                    ua: "/docs/matrix/kyiv.pdf",
-                    en: "/docs/matrix/kyiv.pdf",
-                    ru: "/docs/matrix/kyiv.pdf",
-                  },
-                },
-              ],
-            },
-            {
-              name: {
-                ua: "Web chat: Харків",
-                ru: "Веб чат: Харьков",
-                en: "Web chat: Kharkiv",
-              },
-              link: "https://chat.kharkiv.dcomm.net.ua/",
-              docs: [
-                {
-                  name: "HTML",
-                  link: {
-                    ua: "/docs/matrix/kharkiv.html",
-                    en: "/docs/matrix/kharkiv.html",
-                    ru: "/docs/matrix/kharkiv.html",
-                  },
-                },
-                {
-                  name: "PDF",
-                  link: {
-                    ua: "/docs/matrix/kharkiv.pdf",
-                    en: "/docs/matrix/kharkiv.pdf",
-                    ru: "/docs/matrix/kharkiv.pdf",
-                  },
-                },
-              ],
-            },
-            {
-              name: {
-                ua: "Web chat: Одеса",
-                ru: "Веб чат: Одесса",
-                en: "Web chat: Odessa",
-              },
-              link: "https://chat.odessa.dcomm.net.ua/",
-              docs: [
-                {
-                  name: "HTML",
-                  link: {
-                    ua: "/docs/matrix/odessa.html",
-                    en: "/docs/matrix/odessa.html",
-                    ru: "/docs/matrix/odessa.html",
-                  },
-                },
-                {
-                  name: "PDF",
-                  link: {
-                    ua: "/docs/matrix/odessa.pdf",
-                    en: "/docs/matrix/odessa.pdf",
-                    ru: "/docs/matrix/odessa.pdf",
-                  },
-                },
-              ],
-            },
-          ],
-        },
+        // desktopApp: {
+        //   name: { ua: "", ru: "", en: "" },
+        //   logo: "/logo/logo-mark-primary.svg",
+        //   platforms: [],
+        //   link: "",
+        //   localLink: "",
+        //   servers: [
+        //     {
+        //       name: {
+        //         ua: "Web chat: Київ",
+        //         ru: "Веб чат: Киев",
+        //         en: "Web chat: Kyiv",
+        //       },
+        //       link: "https://chat.kyiv.dcomm.net.ua/",
+        //       docs: [
+        //         {
+        //           name: "HTML",
+        //           link: {
+        //             ua: "/docs/matrix/kyiv.html",
+        //             en: "/docs/matrix/kyiv.html",
+        //             ru: "/docs/matrix/kyiv.html",
+        //           },
+        //         },
+        //         {
+        //           name: "PDF",
+        //           link: {
+        //             ua: "/docs/matrix/kyiv.pdf",
+        //             en: "/docs/matrix/kyiv.pdf",
+        //             ru: "/docs/matrix/kyiv.pdf",
+        //           },
+        //         },
+        //       ],
+        //     },
+        //     {
+        //       name: {
+        //         ua: "Web chat: Харків",
+        //         ru: "Веб чат: Харьков",
+        //         en: "Web chat: Kharkiv",
+        //       },
+        //       link: "https://chat.kharkiv.dcomm.net.ua/",
+        //       docs: [
+        //         {
+        //           name: "HTML",
+        //           link: {
+        //             ua: "/docs/matrix/kharkiv.html",
+        //             en: "/docs/matrix/kharkiv.html",
+        //             ru: "/docs/matrix/kharkiv.html",
+        //           },
+        //         },
+        //         {
+        //           name: "PDF",
+        //           link: {
+        //             ua: "/docs/matrix/kharkiv.pdf",
+        //             en: "/docs/matrix/kharkiv.pdf",
+        //             ru: "/docs/matrix/kharkiv.pdf",
+        //           },
+        //         },
+        //       ],
+        //     },
+        //     {
+        //       name: {
+        //         ua: "Web chat: Одеса",
+        //         ru: "Веб чат: Одесса",
+        //         en: "Web chat: Odessa",
+        //       },
+        //       link: "https://chat.odessa.dcomm.net.ua/",
+        //       docs: [
+        //         {
+        //           name: "HTML",
+        //           link: {
+        //             ua: "/docs/matrix/odessa.html",
+        //             en: "/docs/matrix/odessa.html",
+        //             ru: "/docs/matrix/odessa.html",
+        //           },
+        //         },
+        //         {
+        //           name: "PDF",
+        //           link: {
+        //             ua: "/docs/matrix/odessa.pdf",
+        //             en: "/docs/matrix/odessa.pdf",
+        //             ru: "/docs/matrix/odessa.pdf",
+        //           },
+        //         },
+        //       ],
+        //     },
+        //   ],
+        // },
         mobileApp: {
           name: {
             ua: "Element",
@@ -120,88 +120,88 @@ Public group moderation is on.</p>
           platforms: [{ name: "Android", link: "" }],
           link: "https://element.io/get-started#download",
           localLink: "/package/element/files/",
-          servers: [
-            {
-              name: {
-                ua: "Київ сервер: matrix.kyiv.dcomm.net.ua",
-                ru: "Киев сервер: matrix.kyiv.dcomm.net.ua",
-                en: "Kyiv server: matrix.kyiv.dcomm.net.ua",
-              },
-              link: "",
+          // servers: [
+          //   {
+          //     name: {
+          //       ua: "Київ сервер: matrix.kyiv.dcomm.net.ua",
+          //       ru: "Киев сервер: matrix.kyiv.dcomm.net.ua",
+          //       en: "Kyiv server: matrix.kyiv.dcomm.net.ua",
+          //     },
+          //     link: "",
 
-              docs: [
-             {
-              name: "HTML",
-              link: {
-                ua: "/docs/element/kyiv.html",
-                en: "/docs/element/kyiv.html",
-                ru: "/docs/element/kyiv.html",
-              },
-            },
-                {
-                  name: "PDF",
-                  link: {
-                    ua: "/docs/element/kyiv.pdf",
-                    en: "/docs/element/kyiv.pdf",
-                    ru: "/docs/element/kyiv.pdf",
-                  },
-                },
-              ],
-            },
-            {
-              name: {
-                ua: "Харків сервер: matrix.kharkiv.dcomm.net.ua",
-                ru: "Харьков сервер: matrix.kharkiv.dcomm.net.ua",
-                en: "Kharkiv server: matrix.kharkiv.dcomm.net.ua",
-              },
-              link: "",
+          //     docs: [
+          //    {
+          //     name: "HTML",
+          //     link: {
+          //       ua: "/docs/element/kyiv.html",
+          //       en: "/docs/element/kyiv.html",
+          //       ru: "/docs/element/kyiv.html",
+          //     },
+          //   },
+          //       {
+          //         name: "PDF",
+          //         link: {
+          //           ua: "/docs/element/kyiv.pdf",
+          //           en: "/docs/element/kyiv.pdf",
+          //           ru: "/docs/element/kyiv.pdf",
+          //         },
+          //       },
+          //     ],
+          //   },
+          //   {
+          //     name: {
+          //       ua: "Харків сервер: matrix.kharkiv.dcomm.net.ua",
+          //       ru: "Харьков сервер: matrix.kharkiv.dcomm.net.ua",
+          //       en: "Kharkiv server: matrix.kharkiv.dcomm.net.ua",
+          //     },
+          //     link: "",
 
-              docs: [
-             {
-              name: "HTML",
-              link: {
-                ua: "/docs/element/kharkiv.html",
-                en: "/docs/element/kharkiv.html",
-                ru: "/docs/element/kharkiv.html",
-              },
-            },
-                {
-                  name: "PDF",
-                  link: {
-                    ua: "/docs/element/kharkiv.pdf",
-                    en: "/docs/element/kharkiv.pdf",
-                    ru: "/docs/element/kharkiv.pdf",
-                  },
-                },
-              ],
-            },
-            {
-              name: {
-                ua: "Одеса сервер: matrix.odessa.dcomm.net.ua",
-                ru: "Одесса сервер: matrix.odessa.dcomm.net.ua",
-                en: "Odessa server: matrix.odessa.dcomm.net.ua",
-              },
-              link: "",
-              docs: [
-             {
-              name: "HTML",
-              link: {
-                ua: "/docs/element/odessa.html",
-                en: "/docs/element/odessa.html",
-                ru: "/docs/element/odessa.html",
-              },
-            },
-                {
-                  name: "PDF",
-                  link: {
-                    ua: "/docs/element/odessa.pdf",
-                    en: "/docs/element/odessa.pdf",
-                    ru: "/docs/element/odessa.pdf",
-                  },
-                },
-              ],
-            },
-          ],
+          //     docs: [
+          //    {
+          //     name: "HTML",
+          //     link: {
+          //       ua: "/docs/element/kharkiv.html",
+          //       en: "/docs/element/kharkiv.html",
+          //       ru: "/docs/element/kharkiv.html",
+          //     },
+          //   },
+          //       {
+          //         name: "PDF",
+          //         link: {
+          //           ua: "/docs/element/kharkiv.pdf",
+          //           en: "/docs/element/kharkiv.pdf",
+          //           ru: "/docs/element/kharkiv.pdf",
+          //         },
+          //       },
+          //     ],
+          //   },
+          //   {
+          //     name: {
+          //       ua: "Одеса сервер: matrix.odessa.dcomm.net.ua",
+          //       ru: "Одесса сервер: matrix.odessa.dcomm.net.ua",
+          //       en: "Odessa server: matrix.odessa.dcomm.net.ua",
+          //     },
+          //     link: "",
+          //     docs: [
+          //    {
+          //     name: "HTML",
+          //     link: {
+          //       ua: "/docs/element/odessa.html",
+          //       en: "/docs/element/odessa.html",
+          //       ru: "/docs/element/odessa.html",
+          //     },
+          //   },
+          //       {
+          //         name: "PDF",
+          //         link: {
+          //           ua: "/docs/element/odessa.pdf",
+          //           en: "/docs/element/odessa.pdf",
+          //           ru: "/docs/element/odessa.pdf",
+          //         },
+          //       },
+          //     ],
+          //   },
+          // ],
         },
       },
       {
@@ -226,28 +226,28 @@ Public group moderation is on.</p>
           ],
           link: "https://delta.chat/en/download",
           localLink: "",
-          servers: [
-            {
-              name: { ua: "Київ сервер", ru: "Киев сервер", en: "Kyiv server" },
-              link: "/docs/deltachat/kyiv-invite.png",
-            },
-            {
-              name: {
-                ua: "Харків сервер",
-                ru: "Харьков сервер",
-                en: "Kharkiv server",
-              },
-              link: "/docs/deltachat/kharkiv-invite.png",
-            },
-            {
-              name: {
-                ua: "Одеса сервер",
-                ru: "Одесса сервер",
-                en: "Odessa server",
-              },
-              link: "/docs/deltachat/odessa-invite.png",
-            },
-          ],
+          // servers: [
+          //   {
+          //     name: { ua: "Київ сервер", ru: "Киев сервер", en: "Kyiv server" },
+          //     link: "/docs/deltachat/kyiv-invite.png",
+          //   },
+          //   {
+          //     name: {
+          //       ua: "Харків сервер",
+          //       ru: "Харьков сервер",
+          //       en: "Kharkiv server",
+          //     },
+          //     link: "/docs/deltachat/kharkiv-invite.png",
+          //   },
+          //   {
+          //     name: {
+          //       ua: "Одеса сервер",
+          //       ru: "Одесса сервер",
+          //       en: "Odessa server",
+          //     },
+          //     link: "/docs/deltachat/odessa-invite.png",
+          //   },
+          // ],
           docs: [
             {
               name: "PDF",
@@ -282,28 +282,28 @@ Public group moderation is on.</p>
             },
           ],
           localLink: "/package/deltachat/files/",
-          servers: [
-            {
-              name: { ua: "Київ сервер", ru: "Киев сервер", en: "Kyiv server" },
-              link: "/docs/deltachat/kyiv-invite.png",
-            },
-            {
-              name: {
-                ua: "Харків сервер",
-                ru: "Харьков сервер",
-                en: "Kharkiv server",
-              },
-              link: "/docs/deltachat/kharkiv-invite.png",
-            },
-            {
-              name: {
-                ua: "Одеса сервер",
-                ru: "Одесса сервер",
-                en: "Odessa server",
-              },
-              link: "/docs/deltachat/odessa-invite.png",
-            },
-          ],
+          // servers: [
+          //   {
+          //     name: { ua: "Київ сервер", ru: "Киев сервер", en: "Kyiv server" },
+          //     link: "/docs/deltachat/kyiv-invite.png",
+          //   },
+          //   {
+          //     name: {
+          //       ua: "Харків сервер",
+          //       ru: "Харьков сервер",
+          //       en: "Kharkiv server",
+          //     },
+          //     link: "/docs/deltachat/kharkiv-invite.png",
+          //   },
+          //   {
+          //     name: {
+          //       ua: "Одеса сервер",
+          //       ru: "Одесса сервер",
+          //       en: "Odessa server",
+          //     },
+          //     link: "/docs/deltachat/odessa-invite.png",
+          //   },
+          // ],
         },
       },
       {

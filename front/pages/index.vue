@@ -5,7 +5,7 @@
       <div class="container px-3 sm:px-0">
         <p class="text-lg">{{ $t("about.info") }}</p>
         <p class="text-lg">{{ $t("about.sites") }}</p>
-        <p
+        <!-- <p
           class="
             grid grid-cols-3
             gap-3
@@ -55,7 +55,7 @@
             >{{ $t("cities.kharkiv") }}</a
           >
         </p>
-        <p class="text-gray-400 text-center">{{ $t("about.local") }}</p>
+        <p class="text-gray-400 text-center">{{ $t("about.local") }}</p> -->
       </div>
     </div>
     <main class="container px-3 sm:px-0">
@@ -81,7 +81,7 @@
 <script>
 export default {
   nuxtI18n: {
-    locales: ["ua", "ru", "en"],
+    locales: ["ru"],
   },
   name: "IndexPage",
   computed: {

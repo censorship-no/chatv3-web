@@ -30,9 +30,9 @@ export default {
   i18n: {
     detectBrowserLanguage: false,
     vueI18nLoader: true,
-    defaultLocale: "ua",
+    defaultLocale: "ru",
     vueI18n: {
-      fallbackLocale: ["ua", "en", "ru"],
+      fallbackLocale: ["ru"],
     },
     strategy: "prefix_except_default",
     legacy: false,
