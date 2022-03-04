@@ -32,30 +32,29 @@ Public group moderation is on.</p>
           servers: [
             {
               name: {
-                ua: "Київ сервер: matrix.kyiv.dcomm.net.ua",
-                ru: "Московский сервер: moscow.chatv3.ru",
-                en: "Kyiv server: matrix.kyiv.dcomm.net.ua",
+                ua: "Web chat: Київ",
+                ru: "Веб чат: Москва",
+                en: "Web chat: Kyiv",
               },
-              link: "",
-
-            //   docs: [
-            //  {
-            //   name: "HTML",
-            //   link: {
-            //     ua: "/docs/element/kyiv.html",
-            //     en: "/docs/element/kyiv.html",
-            //     ru: "/docs/element/kyiv.html",
-            //   },
-            // },
-            //     {
-            //       name: "PDF",
-            //       link: {
-            //         ua: "/docs/element/kyiv.pdf",
-            //         en: "/docs/element/kyiv.pdf",
-            //         ru: "/docs/element/kyiv.pdf",
-            //       },
-            //     },
-            //   ],
+              link: "https://moscow.chatv3.ru/",
+              // docs: [
+              //   {
+              //     name: "HTML",
+              //     link: {
+              //       ua: "/docs/matrix/kyiv.html",
+              //       en: "/docs/matrix/kyiv.html",
+              //       ru: "/docs/matrix/kyiv.html",
+              //     },
+              //   },
+              //   {
+              //     name: "PDF",
+              //     link: {
+              //       ua: "/docs/matrix/kyiv.pdf",
+              //       en: "/docs/matrix/kyiv.pdf",
+              //       ru: "/docs/matrix/kyiv.pdf",
+              //     },
+              //   },
+              // ],
             },
 
           ],
@@ -74,7 +73,7 @@ Public group moderation is on.</p>
             {
               name: {
                 ua: "Київ сервер: matrix.kyiv.dcomm.net.ua",
-                ru: "Московский сервер: moscow.chatv3.ru",
+                ru: "Московский сервер: matrix.moscow.chatv3.ru",
                 en: "Kyiv server: matrix.kyiv.dcomm.net.ua",
               },
               link: "",

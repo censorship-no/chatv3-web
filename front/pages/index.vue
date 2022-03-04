@@ -25,7 +25,7 @@
               text-gray-600
               hover:border-[#e53323] hover:text-[#e53323]
             "
-            href="https://moscow.chatv3.ru"
+            href="https://moscow.chatv3.ru/"
             >{{ $t("cities.moscow") }}</a
           >
           <!-- <a
