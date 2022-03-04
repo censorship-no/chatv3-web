@@ -3,7 +3,6 @@ export default {
   ssr: false,
 
   // Target: https://go.nuxtjs.dev/config-target
-  mode: "universal",
   target: "static",
   generate: {
     dir: "../site/",
@@ -11,7 +10,7 @@ export default {
   router: {},
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "dComms",
+    title: "Чат3",
     htmlAttrs: {
       lang: "ru",
     },
@@ -40,7 +39,7 @@ export default {
       {
         hid: "twitter:image",
         name: "twitter:image",
-        content: "/logo/bridge-icon.png",
+        content: "/bridge-icon.png",
       },
       {
         hid: "twitter:image:alt",
@@ -61,7 +60,7 @@ export default {
       {
         hid: "og:image",
         property: "og:image",
-        content: "/logo/bridge-icon.png",
+        content: "/bridge-icon.png",
       },
       {
         hid: "og:locale",
@@ -71,12 +70,12 @@ export default {
       {
         hid: "vk:image",
         property: "vk:image",
-        content: "/logo/bridge-icon.png",
+        content: "/bridge-icon.png",
       },
       {
         hid: "og:image:alt",
         property: "og:image:alt",
-        content: "/logo/bridge-icon.png",
+        content: "/bridge-icon.png",
       },
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
