@@ -26,6 +26,11 @@ export default {
       },
       { name: "format-detection", content: "telephone=no" },
       {
+        hid: "title",
+        name: "title",
+        content: "Чат3",
+      },
+      {
         hid: "twitter:title",
         name: "twitter:title",
         content: "dComms",
@@ -47,9 +52,19 @@ export default {
         content: "Antijob.net — чёрный список работодателей",
       },
       {
-        hid: "og:site_name",
-        property: "og:site_name",
-        content: "Antijob.net",
+        hid: "twitter:card",
+        name: "twitter:card",
+        content: "summary",
+      },
+      {
+        hid: "twitter:card",
+        name: "twitter:card",
+        content: "summary",
+      },
+      {
+        hid: "og:image:width",
+        property: "og:image:width",
+        content: "200",
       },
       {
         hid: "og:description",
