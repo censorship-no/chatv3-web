@@ -13,13 +13,13 @@ export default {
   head: {
     title: "dComms",
     htmlAttrs: {
-      lang: "en",
+      lang: "ru",
     },
 
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { hid: "description", name: "description", content: "Децентралізовані комунікації, які працюють з інтернетом або без нього" },
+      { hid: "description", name: "description", content: "Децентрализованные коммуникации, которые работают с интернетом или без него" },
       { name: "format-detection", content: "telephone=no" },
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
