@@ -19,8 +19,65 @@ export default {
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { hid: "description", name: "description", content: "Децентрализованные коммуникации, которые работают с интернетом или без него" },
+      {
+        hid: "description",
+        name: "description",
+        content:
+          "Децентрализованные коммуникации, которые работают с интернетом или без него",
+      },
       { name: "format-detection", content: "telephone=no" },
+      {
+        hid: "twitter:title",
+        name: "twitter:title",
+        content: "dComms",
+      },
+      {
+        hid: "twitter:description",
+        name: "twitter:description",
+        content:
+          "Децентрализованные коммуникации, которые работают с интернетом или без него",
+      },
+      {
+        hid: "twitter:image",
+        name: "twitter:image",
+        content: "/logo/bridge-icon.png",
+      },
+      {
+        hid: "twitter:image:alt",
+        name: "twitter:image:alt",
+        content: "Antijob.net — чёрный список работодателей",
+      },
+      {
+        hid: "og:site_name",
+        property: "og:site_name",
+        content: "Antijob.net",
+      },
+      {
+        hid: "og:description",
+        property: "og:description",
+        content:
+          "Децентрализованные коммуникации, которые работают с интернетом или без него",
+      },
+      {
+        hid: "og:image",
+        property: "og:image",
+        content: "/logo/bridge-icon.png",
+      },
+      {
+        hid: "og:locale",
+        property: "og:locale",
+        content: "ru_RU",
+      },
+      {
+        hid: "vk:image",
+        property: "vk:image",
+        content: "/logo/bridge-icon.png",
+      },
+      {
+        hid: "og:image:alt",
+        property: "og:image:alt",
+        content: "/logo/bridge-icon.png",
+      },
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
   },
