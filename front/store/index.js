@@ -69,7 +69,7 @@ export const state = () => ({
           localLink: "/package/element/files/",
           servers: [
             {
-              name: "Cервер Чебурашка: matrix.1.chatv3.ru",
+              name: "Cервер Чебурашка: matrix.moscow.chatv3.ru",
               link: "",
             },
             {
