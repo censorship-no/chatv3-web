@@ -28,35 +28,35 @@ export const state = () => ({
           localLink: "",
           servers: [
             {
-              name: "Веб чат: Чебурашка (Москва)",
+              name: "Веб чат: Чебурашка",
               link: "https://chat.1.chatv3.ru",
             },
             {
-              name: "Веб чат: Гена (Санкт-Петербург)",
+              name: "Веб чат: Гена",
               link: "https://chat.2.chatv3.ru",
             },
             {
-              name: "Веб чат: Волк (Самара)",
+              name: "Веб чат: Волк",
               link: "https://chat.3.chatv3.ru",
             },
             {
-              name: "Веб чат: Заяц (Краснодар)",
+              name: "Веб чат: Заяц",
               link: "https://chat.4.chatv3.ru",
             },
             {
-              name: "Веб чат: Кузя (Екатеринбург)",
+              name: "Веб чат: Кузя",
               link: "https://chat.5.chatv3.ru",
             },
             {
-              name: "Веб чат: Матроскин (Новосибирск)",
+              name: "Веб чат: Матроскин",
               link: "https://chat.6.chatv3.ru",
             },
             {
-              name: "Веб чат: Шарик (Владивосток)",
+              name: "Веб чат: Шарик",
               link: "https://chat.7.chatv3.ru",
             },
             {
-              name: "Веб чат: Печкин (Хабаровск)",
+              name: "Веб чат: Печкин",
               link: "https://chat.8.chatv3.ru",
             },
           ],
@@ -69,35 +69,35 @@ export const state = () => ({
           localLink: "/package/element/files/",
           servers: [
             {
-              name: "Cервер Чебурашка (Москва): matrix.1.chatv3.ru",
+              name: "Cервер Чебурашка: matrix.1.chatv3.ru",
               link: "",
             },
             {
-              name: "Cервер Гена (Санкт-Петербург): matrix.2.chatv3.ru",
+              name: "Cервер Гена: matrix.2.chatv3.ru",
               link: "",
             },
             {
-              name: "Cервер Волк (Самара): matrix.3.chatv3.ru",
+              name: "Cервер Волк: matrix.3.chatv3.ru",
               link: "",
             },
             {
-              name: "Cервер Заяц (Краснодар): matrix.4.chatv3.ru",
+              name: "Cервер Заяц: matrix.4.chatv3.ru",
               link: "",
             },
             {
-              name: "Cервер Кузя (Екатеринбург): matrix.5.chatv3.ru",
+              name: "Cервер Кузя: matrix.5.chatv3.ru",
               link: "",
             },
             {
-              name: "Cервер Матроскин (Новосибирск): matrix.6.chatv3.ru",
+              name: "Cервер Матроскин: matrix.6.chatv3.ru",
               link: "",
             },
             {
-              name: "Cервер Шарик (Владивосток): matrix.7.chatv3.ru",
+              name: "Cервер Шарик: matrix.7.chatv3.ru",
               link: "",
             },
             {
-              name: "Cервер Печкин (Хабаровск): matrix.8.chatv3.ru",
+              name: "Cервер Печкин: matrix.8.chatv3.ru",
               link: "",
             },
           ],
@@ -121,35 +121,35 @@ export const state = () => ({
           localLink: "",
           servers: [
             {
-              name: "Сервер Чебурашка (Москва)",
+              name: "Сервер Чебурашка",
               link: "/docs/deltachat/mosow-invite.png",
             },
             {
-              name: "Сервер Гена (Санкт-Петербург)",
+              name: "Сервер Гена",
               link: "/docs/deltachat/dcaccount-2.chatv3.ru-KwNAtP6J.png",
             },
             {
-              name: "Сервер Волк (Самара)",
+              name: "Сервер Волк",
               link: "/docs/deltachat/dcaccount-3.chatv3.ru-KwNAtP6J.png",
             },
             {
-              name: "Сервер Заяц (Краснодар)",
+              name: "Сервер Заяц",
               link: "/docs/deltachat/dcaccount-4.chatv3.ru-KwNAtP6J.png",
             },
             {
-              name: "Сервер Кузя (Екатеринбург)",
+              name: "Сервер Кузя",
               link: "/docs/deltachat/dcaccount-5.chatv3.ru-KwNAtP6J.png",
             },
             {
-              name: "Сервер Матроскин (Новосибирск)",
+              name: "Сервер Матроскин",
               link: "/docs/deltachat/dcaccount-6.chatv3.ru-KwNAtP6J.png",
             },
             {
-              name: "Сервер Шарик (Владивосток)",
+              name: "Сервер Шарик",
               link: "/docs/deltachat/dcaccount-7.chatv3.ru-KwNAtP6J.png",
             },
             {
-              name: "Сервер Печкин (Хабаровск)",
+              name: "Сервер Печкин",
               link: "/docs/deltachat/dcaccount-8.chatv3.ru-KwNAtP6J.png",
             },
           ],
@@ -177,35 +177,35 @@ export const state = () => ({
           localLink: "/package/deltachat/files/",
           servers: [
             {
-              name: "Сервер Чебурашка (Москва)",
+              name: "Сервер Чебурашка",
               link: "/docs/deltachat/mosow-invite.png",
             },
             {
-              name: "Сервер Гена (Санкт-Петербург)",
+              name: "Сервер Гена",
               link: "/docs/deltachat/dcaccount-2.chatv3.ru-KwNAtP6J.png",
             },
             {
-              name: "Сервер Волк (Самара)",
+              name: "Сервер Волк",
               link: "/docs/deltachat/dcaccount-3.chatv3.ru-KwNAtP6J.png",
             },
             {
-              name: "Сервер Заяц (Краснодар)",
+              name: "Сервер Заяц",
               link: "/docs/deltachat/dcaccount-4.chatv3.ru-KwNAtP6J.png",
             },
             {
-              name: "Сервер Кузя (Екатеринбург)",
+              name: "Сервер Кузя",
               link: "/docs/deltachat/dcaccount-5.chatv3.ru-KwNAtP6J.png",
             },
             {
-              name: "Сервер Матроскин (Новосибирск)",
+              name: "Сервер Матроскин",
               link: "/docs/deltachat/dcaccount-6.chatv3.ru-KwNAtP6J.png",
             },
             {
-              name: "Сервер Шарик (Владивосток)",
+              name: "Сервер Шарик",
               link: "/docs/deltachat/dcaccount-7.chatv3.ru-KwNAtP6J.png",
             },
             {
-              name: "Сервер Печкин (Хабаровск)",
+              name: "Сервер Печкин",
               link: "/docs/deltachat/dcaccount-8.chatv3.ru-KwNAtP6J.png",
             },
           ],
