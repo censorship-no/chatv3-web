@@ -29,7 +29,7 @@ export const state = () => ({
           servers: [
             {
               name: "Веб чат: Чебурашка",
-              link: "https://chat.1.chatv3.ru",
+              link: "https://chat.moscow.chatv3.ru",
             },
             {
               name: "Веб чат: Гена",
