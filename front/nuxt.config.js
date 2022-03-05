@@ -18,80 +18,8 @@ export default {
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      {
-        hid: "description",
-        name: "description",
-        content:
-          "Децентрализованные коммуникации, которые работают с интернетом или без него",
-      },
+
       { name: "format-detection", content: "telephone=no" },
-      {
-        hid: "title",
-        name: "title",
-        content: "Чат3",
-      },
-      {
-        hid: "twitter:title",
-        name: "twitter:title",
-        content: "dComms",
-      },
-      {
-        hid: "twitter:description",
-        name: "twitter:description",
-        content:
-          "Децентрализованные коммуникации, которые работают с интернетом или без него",
-      },
-      {
-        hid: "twitter:image",
-        name: "twitter:image",
-        content: "/bridge-icon.png",
-      },
-      {
-        hid: "twitter:image:alt",
-        name: "twitter:image:alt",
-        content: "Antijob.net — чёрный список работодателей",
-      },
-      {
-        hid: "twitter:card",
-        name: "twitter:card",
-        content: "summary",
-      },
-      {
-        hid: "twitter:card",
-        name: "twitter:card",
-        content: "summary",
-      },
-      {
-        hid: "og:image:width",
-        property: "og:image:width",
-        content: "200",
-      },
-      {
-        hid: "og:description",
-        property: "og:description",
-        content:
-          "Децентрализованные коммуникации, которые работают с интернетом или без него",
-      },
-      {
-        hid: "og:image",
-        property: "og:image",
-        content: "/bridge-icon.png",
-      },
-      {
-        hid: "og:locale",
-        property: "og:locale",
-        content: "ru_RU",
-      },
-      {
-        hid: "vk:image",
-        property: "vk:image",
-        content: "/bridge-icon.png",
-      },
-      {
-        hid: "og:image:alt",
-        property: "og:image:alt",
-        content: "/bridge-icon.png",
-      },
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
   },
