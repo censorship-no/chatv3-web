@@ -8,26 +8,26 @@
       />
       <div
         class="mb-6 sm:mb-0 sm:text-xl"
-        v-html="data.descr[$i18n.locale]"
+        v-html="data.descr"
       ></div>
     </div>
     <div class="sm:grid sm:grid-cols-2 sm:gap-8 mt-8">
       <div v-if="data.desktopApp" class="p-5 sm:rounded-lg mb-6 -mx-3 sm:mx-0">
         <div class="mb-3 font-bold">{{ $t("items.desktopApp") }}</div>
-        <div v-if="data.desktopApp.name[$i18n.locale]" class="mb-3">
+        <div v-if="data.desktopApp.name" class="mb-3">
           <img
             :src="data.mobileApp.logo"
             class="inline w-5"
-            :alt="data.mobileApp.name[$i18n.locale]"
+            :alt="data.mobileApp.name"
           />
           <a
             class="text-lg"
             :href="data.desktopApp.link"
             v-if="data.desktopApp.link"
           >
-            {{ data.desktopApp.name[$i18n.locale] }}</a
+            {{ data.desktopApp.name }}</a
           >
-          <span v-else> {{ data.desktopApp.name[$i18n.locale] }}</span>
+          <span v-else> {{ data.desktopApp.name }}</span>
           <a
             v-if="data.desktopApp.localLink"
             :href="data.desktopApp.localLink"
@@ -57,16 +57,16 @@
             class="mb-3 sm:pr-6"
           >
             <a :href="itemServers.link" v-if="itemServers.link">{{
-              itemServers.name[$i18n.locale]
+              itemServers.name
             }}</a>
-            <span v-else>{{ itemServers.name[$i18n.locale] }}</span>
+            <span v-else>{{ itemServers.name }}</span>
             <span v-if="itemServers.docs">
               (
               {{ $t("items.instruction") }}
               <a
                 v-for="(itemDocs, index) in itemServers.docs"
                 :key="itemDocs.link"
-                :href="itemDocs.link[$i18n.locale]"
+                :href="itemDocs.link"
                 >{{
                   itemDocs.name +
                   (index === itemServers.docs.length - 1 ? "" : ", ")
@@ -78,20 +78,20 @@
       </div>
       <div v-if="data.mobileApp" class="p-5 sm:rounded-lg -mx-3 sm:mx-0">
         <div class="mb-3 font-bold">{{ $t("items.mobileApp") }}</div>
-        <div v-if="data.mobileApp.name[$i18n.locale]" class="mb-3">
+        <div v-if="data.mobileApp.name" class="mb-3">
           <img
             :src="data.mobileApp.logo"
             class="inline w-5"
-            :alt="data.mobileApp.name[$i18n.locale]"
+            :alt="data.mobileApp.name"
           />
           <a
             class="text-lg"
             :href="data.mobileApp.link"
             v-if="data.mobileApp.link"
           >
-            {{ data.mobileApp.name[$i18n.locale] }}</a
+            {{ data.mobileApp.name }}</a
           >
-          <span v-else> {{ data.mobileApp.name[$i18n.locale] }}</span>
+          <span v-else> {{ data.mobileApp.name }}</span>
           (<span
             v-for="(platformItem, index) in data.mobileApp.platforms"
             :key="platformItem.name"
@@ -116,7 +116,7 @@
           <div v-if="data.mobileApp.docs">
             {{ $t("items.instruction") }}
             <span v-for="(docs, index) in data.mobileApp.docs" :key="docs.name"
-              ><a :href="docs.link[$i18n.locale]">{{
+              ><a :href="docs.link">{{
                 docs.name +
                 (index === data.mobileApp.docs.length - 1 ? "" : ", ")
               }}</a></span
@@ -129,16 +129,16 @@
           class="mb-3"
         >
           <a :href="itemServers.link" v-if="itemServers.link">{{
-            itemServers.name[$i18n.locale]
+            itemServers.name
           }}</a>
-          <span v-else>{{ itemServers.name[$i18n.locale] }}</span>
+          <span v-else>{{ itemServers.name }}</span>
 
           <span v-if="itemServers.docs">
             ({{ $t("items.instruction") }}
             <a
               v-for="itemDocs in itemServers.docs"
               :key="itemDocs.link"
-              :href="itemDocs.link[$i18n.locale]"
+              :href="itemDocs.link"
               >{{ itemDocs.name }} </a
             >)
           </span>

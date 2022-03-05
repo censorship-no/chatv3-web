@@ -10,7 +10,7 @@ export default {
   router: {},
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "Чат3",
+    title: "Чат v. 3",
     description:
       "Децентрализованные коммуникации, которые работают с интернетом или без него",
 
@@ -32,7 +32,7 @@ export default {
       {
         hid: "twitter:title",
         name: "twitter:title",
-        content: "Чат3",
+        content: "Чат v. 3",
       },
       {
         hid: "twitter:description",
@@ -63,17 +63,17 @@ export default {
       {
         hid: "twitter:image:alt",
         name: "twitter:image:alt",
-        content: "Чат3",
+        content: "Чат v. 3",
       },
       {
         hid: "og:title",
         property: "og:title",
-        content: "Чат3",
+        content: "Чат v. 3",
       },
       {
         hid: "og:site_name",
         property: "og:site_name",
-        content: "Чат3",
+        content: "Чат v. 3",
       },
       {
         hid: "og:description",

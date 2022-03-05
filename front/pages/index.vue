@@ -6,9 +6,11 @@
       <div class="container px-3 sm:px-0">
         <p class="text-lg">{{ $t("about.info") }}</p>
         <p class="text-lg">{{ $t("about.sites") }}</p>
+        <h2 class="text-2xl my-3 text-center">Наши сервера:</h2>
         <p
           class="
             flex
+            flex-wrap
             gap-3
             text-center
             justify-center
@@ -26,35 +28,12 @@
               text-gray-600
               hover:border-[#e53323] hover:text-[#e53323]
             "
-            href="https://moscow.chatv3.ru/"
-            >{{ $t("cities.moscow") }}</a
+            v-for="item in $store.state.servers"
+            :key="item.name"
+            :href="item.link"
+            >{{item.name}}</a
           >
-          <!-- <a
-            class="
-              sm:text-xl
-              border-2 border-gray-600
-              p-3
-              sm:p-6
-              rounded-lg
-              text-gray-600
-              hover:border-[#e53323] hover:text-[#e53323]
-            "
-            href="https://odessa.dcomm.net.ua"
-            >{{ $t("cities.odessa") }}</a
-          >
-          <a
-            class="
-              sm:text-xl
-              border-2 border-gray-600
-              p-3
-              sm:p-6
-              rounded-lg
-              text-gray-600
-              hover:border-[#e53323] hover:text-[#e53323]
-            "
-            href="https://kharkiv.dcomm.net.ua"
-            >{{ $t("cities.kharkiv") }}</a
-          > -->
+
         </p>
         <p class="text-gray-400 text-center">{{ $t("about.local") }}</p>
       </div>
