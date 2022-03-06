@@ -69,35 +69,35 @@ export const state = () => ({
           localLink: "/package/element/files/",
           servers: [
             {
-              name: "Matrix: matrix.moscow.chatv3.ru",
+              name: "Сервер Москва: matrix.moscow.chatv3.ru",
               link: "",
             },
             {
-              name: "Matrix: matrix.piter.chatv3.ru",
+              name: "Сервер Санкт-Петербург: matrix.piter.chatv3.ru",
               link: "",
             },
             {
-              name: "Cервер Волк: matrix.samara.chatv3.ru",
+              name: "Cервер Самара: matrix.samara.chatv3.ru",
               link: "",
             },
             {
-              name: "Matrix: matrix.krasnodar.chatv3.ru",
+              name: "Сервер Краснодар: matrix.krasnodar.chatv3.ru",
               link: "",
             },
             {
-              name: "Matrix: matrix.ekaterinburg.chatv3.ru",
+              name: "Сервер Екатеринбург: matrix.ekaterinburg.chatv3.ru",
               link: "",
             },
             {
-              name: "Matrix: matrix.novosibirsk.chatv3.ru",
+              name: "Сервер Новосибирск: matrix.novosibirsk.chatv3.ru",
               link: "",
             },
             {
-              name: "Matrix: matrix.vladivostok.chatv3.ru",
+              name: "Сервер Владивосток: matrix.vladivostok.chatv3.ru",
               link: "",
             },
             {
-              name: "Matrix: matrix.khabarovsk.chatv3.ru",
+              name: "Сервер Хабаровск: matrix.khabarovsk.chatv3.ru",
               link: "",
             },
           ],
