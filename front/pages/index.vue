@@ -6,20 +6,11 @@
       <div class="container px-3 sm:px-0">
         <p class="text-lg">{{ $t("about.info") }}</p>
         <p class="text-lg">{{ $t("about.sites") }}</p>
-        <h2 class="text-2xl my-3 text-center">Наши сервера:</h2>
-        <p
-          class="
-            flex
-            flex-wrap
-            gap-3
-            text-center
-            justify-center
-            my-8
-          "
-        >
+        <h2 class="text-2xl my-3 text-center">{{ $t("about.servers") }}</h2>
+        <p class="flex flex-wrap gap-3 text-center justify-center my-8">
           <a
             class="
-            min-w-[200px]
+              min-w-[200px]
               sm:text-xl
               border-2 border-gray-600
               p-3
@@ -31,9 +22,8 @@
             v-for="item in $store.state.servers"
             :key="item.name"
             :href="item.link"
-            >{{item.name}}</a
+            >{{ item.name }}</a
           >
-
         </p>
         <p class="text-gray-400 text-center">{{ $t("about.local") }}</p>
       </div>
@@ -46,10 +36,16 @@
         <div v-for="item in messaging" :key="item.id">
           <AppItem :data="item" />
         </div>
-        <h3 class="text-3xl font-bold my-8 sm:my-20"">
+        <h3 class="text-3xl font-bold my-8 sm:my-20">
           {{ $t("rubric.browsing") }}
         </h3>
         <div v-for="item in browsing" :key="item.id">
+          <AppItem :data="item" />
+        </div>
+        <h3 class="text-3xl font-bold my-8 sm:my-20">
+          {{ $t("rubric.filesharing") }}
+        </h3>
+        <div v-for="item in filesharing" :key="item.id">
           <AppItem :data="item" />
         </div>
       </div>
@@ -72,6 +68,11 @@ export default {
     },
     browsing() {
       return this.$store.state.items.browsing.filter((item) => {
+        return item.show === true;
+      });
+    },
+    filesharing() {
+      return this.$store.state.items.filesharing.filter((item) => {
         return item.show === true;
       });
     },
