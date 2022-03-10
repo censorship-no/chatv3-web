@@ -289,23 +289,23 @@ export const state = () => ({
         },
       },
     ],
-    filesharing: [
-      {
-        id: 1,
-        show: true,
-        descr: `<p>Syncthing — это надёжное, децентрализованное облачное хранение. Ваши данные остаются только в ваших руках, вы выбираете где они хранятся, хотите ли вы делиться ими с кем-то и каким образом перeдавать их по сети.</p>`,
-
-        logo: "/logo/syncthing.png",
-
-        mobileApp: {
-          name: "Syncthing",
-          logo: "/logo/syncthing.png",
-          platforms: [
-            { name: "Android", link: "" },
-            { name: "Linux", link: "" },
-            { name: "Windows", link: "" },
-            { name: "macOs", link: "" },
-          ],
+//    filesharing: [
+//      {
+//        id: 1,
+//        show: true,
+//        descr: `<p>Syncthing — это надёжное, децентрализованное облачное хранение. Ваши данные остаются только в ваших руках, вы выбираете где они хранятся, хотите ли вы делиться ими с кем-то и каким образом перeдавать их по сети.</p>`,
+//
+//        logo: "/logo/syncthing.png",
+//
+//        mobileApp: {
+//          name: "Syncthing",
+//          logo: "/logo/syncthing.png",
+//          platforms: [
+//            { name: "Android", link: "" },
+//            { name: "Linux", link: "" },
+//            { name: "Windows", link: "" },
+//            { name: "macOs", link: "" },
+//          ],
             // docs: [
             //   {
             //     name: "HTML",
@@ -316,10 +316,10 @@ export const state = () => ({
             //     link: "/docs/syncthing/syncthing.pdf",
             //   },
             // ],
-          link: "https://syncthing.net/downloads",
-          localLink: "/package/syncthing/files/",
-        },
-      },
-    ],
+//          link: "https://syncthing.net/downloads",
+//          localLink: "/package/syncthing/files/",
+//        },
+//      },
+//    ],
   },
 });
