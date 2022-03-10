@@ -1,8 +1,10 @@
-# front
+# dcomms website
 
-Static files in `/dist` directory
-If you want add servise use `/storage/index.js`
-Translate interface in `/lang/` directory
+Website configuration for dcomms, a ready-to-go suite of decentralized communications tools that work with or without Internet.
+
+- Static files in /static/ directory 
+- If you want to add a service use /store/index.js 
+- Translate interface in /lang/ directory.
 
 ## Build Setup
 
