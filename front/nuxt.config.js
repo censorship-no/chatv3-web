@@ -14,7 +14,7 @@ export default {
     htmlAttrs: {
       lang: "ua",
     },
-    title: "dComms",
+    title: "ChatV3",
     description:
       "Децентралізовані комунікації, які працюють з інтернетом або без нього",
     meta: [
@@ -52,7 +52,7 @@ export default {
       {
         hid: "twitter:title",
         name: "twitter:title",
-        content: "dComms",
+        content: "ChatV3",
       },
       {
         hid: "twitter:description",
@@ -75,17 +75,17 @@ export default {
       {
         hid: "twitter:image:alt",
         name: "twitter:image:alt",
-        content: "dComms",
+        content: "ChatV3",
       },
       {
         hid: "og:title",
         property: "og:title",
-        content: "dComms",
+        content: "ChatV3",
       },
       {
         hid: "og:site_name",
         property: "og:site_name",
-        content: "dComms",
+        content: "ChatV3",
       },
       {
         hid: "og:description",
@@ -116,8 +116,8 @@ export default {
   modules: ["@nuxtjs/i18n", "@nuxtjs/google-fonts"],
   pwa: {
     manifest: {
-      name: "dComms",
-      short_name: "dComms",
+      name: "ChatV3",
+      short_name: "ChatV3",
       start_url: "/?standalone=true",
       lang: "ua",
       display: "standalone",
