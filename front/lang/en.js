@@ -1,31 +1,51 @@
 export default {
-  title: "dComms",
+  lang: {
+    ru: "Russian",
+    ua: "Ukrainian",
+    en: "English",
+  },
+  title: {
+    first: "Stay in touch with family and friends",
+    second: "with or without the Internet",
+  },
+  connected: "You are currently connected to the <b>{name}</b> server",
   subtitle:
-    "Decentralized communications that work with or without the Internet",
+    "Decentralized communication tools you can use, even when Internet connectivity to Telegram, Whatsapp, Facebook and others is no longer available.",
+  alert: {
+    title: "Don’t wait. Replicate!",
+    descr:
+      "Stand up your own networks using our local bundle. Join the techops group to discuss collaboration, new services and volunteering",
+    buttons: {
+      repo: "Code Repo",
+      servers: "Matrix Server",
+    },
+  },
   cities: {
     kyiv: "Kyiv",
     odessa: "Odessa",
     kharkiv: "Kharkiv",
-  },
-  about: {
-    info: "Communication services that work on a local network. Useful for staying in touch with friends and family, also when Internet connectivity to Telegram, Whatsapp, FB, etc  is no longer available in your area. The servers below are hosted in Ukraine with local Internet providers. If you can reach them, you can communicate!",
-    sites: "",
-    local:
-      "In case of Internet disconnection, we provide downloads from local servers for all software and documentation.",
+    lviv: "Lviv",
+    lviv2: "Lviv 2",
+    rivne: "Rivne",
   },
 
   footer: {
-    initiative: "Initiative —",
-    org: "censorship.no",
+    initiative: `An initiative by <a target="_blank" href="https://equalit.ie/">eQualit.ie</a>`,
+    license: `Licensed under the <a  href="https://github.com/censorship-no/dcomms"> GNU General Public License v3.0</a>`,
   },
   rubric: {
     messaging: "Chat",
     browsing: "Web Browsing",
+    //    filesharing: "File-Sharing",
   },
+  adressCopy: "Adress copy",
   items: {
+    downloads: "Downloads:",
     desktopApp: "Connecting from a desktop computer:",
     localDownload: "local download",
     instruction: "Instructions: ",
     mobileApp: "Smartphone App:",
+    notAvail: "Not available",
   },
+  copyUrl: "CopyURL",
 };

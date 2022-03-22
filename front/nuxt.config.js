@@ -3,6 +3,7 @@ export default {
   ssr: false,
 
   // Target: https://go.nuxtjs.dev/config-target
+  mode: "universal",
   target: "static",
   generate: {
     dir: "../site/",
@@ -10,41 +11,56 @@ export default {
   router: {},
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "Чат v. 3",
-    description:
-      "Децентрализованные коммуникации, которые работают с интернетом или без него",
-
     htmlAttrs: {
-      lang: "ru",
+      lang: "ua",
     },
-
+    title: "dComms",
+    description:
+      "Децентралізовані комунікації, які працюють з інтернетом або без нього",
     meta: [
-      { charset: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-
-      { name: "format-detection", content: "telephone=no" },
+      {
+        hid: "og:image:alt",
+        property: "og:image:alt",
+        content: `/preview-logo.png`,
+      },
+      {
+        hid: "twitter:image",
+        name: "twitter:image",
+        content: `/preview-logo.png`,
+      },
+      {
+        hid: "og:image",
+        property: "og:image",
+        content: `/preview-logo.png`,
+      },
+      {
+        hid: "vk:image",
+        property: "vk:image",
+        content: `/preview-logo.png`,
+      },
+      {
+        hid: "og:image:secure_url",
+        property: "og:image:secure_url",
+        content: `/preview-logo.png`,
+      },
       {
         hid: "description",
         name: "description",
         content:
-          "Децентрализованные коммуникации, которые работают с интернетом или без него",
+          "Децентралізовані комунікації, які працюють з інтернетом або без нього",
       },
       {
         hid: "twitter:title",
         name: "twitter:title",
-        content: "Чат v. 3",
+        content: "dComms",
       },
       {
         hid: "twitter:description",
         name: "twitter:description",
         content:
-          "Децентрализованные коммуникации, которые работают с интернетом или без него",
+          "Децентралізовані комунікації, які працюють з інтернетом або без нього",
       },
-      {
-        hid: "twitter:image",
-        name: "twitter:image",
-        content: `/bridge-icon.png`,
-      },
+
       {
         hid: "twitter:card",
         name: "twitter:card",
@@ -55,37 +71,29 @@ export default {
         name: "twitter:creator",
         content: "summary_large_image",
       },
-      {
-        hid: "twitter:image",
-        name: "twitter:image",
-        content: `/bridge-icon.png`,
-      },
+
       {
         hid: "twitter:image:alt",
         name: "twitter:image:alt",
-        content: "Чат v. 3",
+        content: "dComms",
       },
       {
         hid: "og:title",
         property: "og:title",
-        content: "Чат v. 3",
+        content: "dComms",
       },
       {
         hid: "og:site_name",
         property: "og:site_name",
-        content: "Чат v. 3",
+        content: "dComms",
       },
       {
         hid: "og:description",
         property: "og:description",
         content:
-          "Децентрализованные коммуникации, которые работают с интернетом или без него",
+          "Децентралізовані комунікації, які працюють з інтернетом або без нього",
       },
-      {
-        hid: "og:image",
-        property: "og:image",
-        content: `/bridge-icon.png`,
-      },
+
       {
         hid: "og:image:heigth",
         property: "og:image:heigth",
@@ -101,27 +109,11 @@ export default {
         property: "og:type",
         content: "website",
       },
-      {
-        hid: "og:image:secure_url",
-        property: "og:image:secure_url",
-        content: `/bridge-icon.png`,
-      },
-      {
-        hid: "og:image:alt",
-        property: "og:image:alt",
-        content: `/bridge-icon.png`,
-      },
-
-      {
-        hid: "vk:image",
-        property: "vk:image",
-        content: `/bridge-icon.png`,
-      },
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon-16x16.svg" }],
   },
 
-  modules: ["@nuxtjs/i18n"],
+  modules: ["@nuxtjs/i18n", "@nuxtjs/google-fonts"],
   pwa: {
     manifest: {
       name: "dComms",
@@ -134,27 +126,27 @@ export default {
       theme_color: "#111111",
       icons: [
         {
-          src: "/android-chrome-192x192.png",
+          src: "/android-chrome-192x192.svg",
           type: "image/png",
           sizes: "192x192",
         },
         {
-          src: "/android-chrome-512x512.png",
+          src: "/android-chrome-512x512.svg",
           type: "image/png",
           sizes: "512x512",
         },
         {
-          src: "/favicon-32x32.png",
+          src: "/favicon-32x32.svg",
           type: "image/png",
           sizes: "32x32",
         },
         {
-          src: "/favicon-16x16.png",
+          src: "/favicon-16x16.svg",
           type: "image/png",
           sizes: "16x16",
         },
         {
-          src: "/android-chrome-192x192.png",
+          src: "/android-chrome-192x192.svg",
           sizes: "192x192",
           type: "image/png",
           purpose: "any maskable",
@@ -162,7 +154,14 @@ export default {
       ],
     },
   },
-
+  googleFonts: {
+    families: {
+      Roboto: true,
+      "Josefin+Sans": true,
+      Inter: [100, 300, 400, 600, 700, 800],
+      download: true,
+    },
+  },
   i18n: {
     detectBrowserLanguage: false,
     vueI18nLoader: true,
@@ -176,25 +175,11 @@ export default {
     langDir: "lang/",
     locales: [
       {
-        code: "ua",
-        name: "UA",
-        nameFull: "Ukranian",
-        iso: "ua-UA",
-        file: "ua.js",
-      },
-      {
         code: "ru",
         name: "RU",
         nameFull: "Русский",
         iso: "ru-RU",
         file: "ru.js",
-      },
-      {
-        code: "en",
-        name: "EN",
-        nameFull: "English",
-        iso: "en-US",
-        file: "en.js",
       },
     ],
   },

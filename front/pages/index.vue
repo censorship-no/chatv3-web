@@ -1,59 +1,73 @@
 <template>
-  <div>
-    <Meta :title="$t('title')" :description="$t('subtitle')"></Meta>
-    <Header></Header>
-    <div class="bg-white py-8 sm:py-20">
-      <div class="container px-3 sm:px-0">
-        <p class="text-lg">{{ $t("about.info") }}</p>
-        <p class="text-lg">{{ $t("about.sites") }}</p>
-        <h2 class="text-2xl my-3 text-center">{{ $t("about.servers") }}</h2>
-        <p class="flex flex-wrap gap-3 text-center justify-center my-8">
-          <a
-            class="
-              min-w-[200px]
-              sm:text-xl
-              border-2 border-gray-600
-              p-3
-              sm:p-6
-              rounded-lg
-              text-gray-600
-              hover:border-[#e53323] hover:text-[#e53323]
-            "
-            v-for="item in $store.state.servers"
-            :key="item.name"
-            :href="item.link"
-            >{{ item.name }}</a
-          >
-        </p>
-        <p class="text-gray-400 text-center">{{ $t("about.local") }}</p>
+  <main class="container px-3 sm:px-0">
+    <Hero />
+    <div>
+      <SectionTitle>
+        <template v-slot:icon>
+          <img class="w-16" src="/icons/chating.svg" alt="" />
+        </template>
+        <template>
+          {{ $t("rubric.messaging") }}
+        </template>
+      </SectionTitle>
+      <div v-for="item in messaging" :key="item.id">
+        <AppItem :data="item" />
+      </div>
+
+      <SectionTitle>
+        <template v-slot:icon>
+          <img class="w-16" src="/icons/browsing.svg" alt="" />
+        </template>
+        <template>
+          {{ $t("rubric.browsing") }}
+        </template>
+      </SectionTitle>
+      <div v-for="item in browsing" :key="item.id">
+        <AppItem :data="item" />
       </div>
     </div>
-    <main class="container px-3 sm:px-0">
-      <div>
-        <h3 class="text-3xl font-bold my-8 sm:my-20">
-          {{ $t("rubric.messaging") }}
-        </h3>
-        <div v-for="item in messaging" :key="item.id">
-          <AppItem :data="item" />
-        </div>
-        <h3 class="text-3xl font-bold my-8 sm:my-20">
-          {{ $t("rubric.browsing") }}
-        </h3>
-        <div v-for="item in browsing" :key="item.id">
-          <AppItem :data="item" />
-        </div>
-      </div>
-    </main>
-    <Footer></Footer>
-  </div>
+    <ReplicateSection />
+  </main>
 </template>
 
 <script>
 export default {
+  layout: "default",
   nuxtI18n: {
-    locales: ["ru"],
+    locales: ["ru"  ],
   },
   name: "IndexPage",
+  head() {
+    return {
+      meta: [
+        // {
+        //   hid: "og:image:alt",
+        //   property: "og:image:alt",
+        //   content: `${window.location.origin}/preview-logo.png`,
+        // },
+        // {
+        //   hid: "twitter:image",
+        //   name: "twitter:image",
+        //   content: `${window.location.origin}/preview-logo.png`,
+        // },
+        // {
+        //   hid: "og:image",
+        //   property: "og:image",
+        //   content: `${window.location.origin}/preview-logo.png`,
+        // },
+        // {
+        //   hid: "vk:image",
+        //   property: "vk:image",
+        //   content: `${window.location.origin}/preview-logo.png`,
+        // },
+        // {
+        //   hid: "og:image:secure_url",
+        //   property: "og:image:secure_url",
+        //   content: `${window.location.origin}/preview-logo.png`,
+        // },
+      ],
+    };
+  },
   computed: {
     messaging() {
       return this.$store.state.items.messaging.filter((item) => {
