@@ -65,7 +65,7 @@
                   src="/icons/copy.svg"
                   class="w-4 mr-1 cursor-pointer"
                   alt=""
-                />{{ $t("copyUrl") }}</span
+                /></span
               >
             </Button>
           </ButtonGroups>
@@ -187,7 +187,6 @@ export default {
       copyText.select();
       copyText.setSelectionRange(0, 99999);
       /* For mobile devices */ navigator.clipboard.writeText(copyText.value);
-      alert(this.$t("adressCopy"));
     },
   },
   computed: {
