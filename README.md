@@ -2,132 +2,65 @@
 
 Decentralized communications that work with or without the Internet 
 
-# Prerequisites
+## Prerequisites
 * A pre-existing [docker swarm](https://docs.docker.com/engine/swarm/) already setup and configured is necessary for orchestration of this software service stack.
 * A domain to use for production.
+* A directory named `/var/www/dcomms` created on the hosts of all docker nodes for the website document root.
 * A subdomain with the A record pointed to the IP address of a node for automatic issuance of a Let's Encrypt SSL certificate.
 * A subdomain with the MX record pointed to the A record of a node for DeltaChat mail delivery.
 
-# Introduction
+## Introduction
 
 `dcomms` is a bundle of decentralized communication software running as services in the form of a docker swarm stack.
 
 It is used to rapidly deploy and orchestrate decentralized, federated, communications platforms such as [Matrix](https://matrix.org/) and [DeltaChat](https://delta.chat) across multiple hosts.
 
-## Service containers
+Let's Encrypt TLS certificates are automatically issued and managed by the Caddy container across all services.
 
-The dcomms stack leverages single node, non-replicated containers of the following services built from the latest images below:
+## Getting Started
 
-* [CENO client](https://hub.docker.com/r/equalitie/ceno-client) courtesy of censorship.no
-* [Synapse Docker](https://hub.docker.com/r/matrixdotorg/synapse/) courtesy of matrix.org
-* [Element](https://hub.docker.com/r/vectorim/element-web/) courtesy of vector-im
-* [Caddy](https://hub.docker.com/_/caddy) courtesy of the Caddy Docker Maintainers
-* [docker-mailadm](https://github.com/deltachat/docker-mailadm), includes dovecot and postfix, courtesy of DeltaChat
+Please see the main [dcomms repo](https://github.com/censorship-no/dcomms) for code and instructions on how to deploy the services. This README instructs on how to deploy the website, https://start.chatv3.ru
 
-## Ports
+The frontend website uses [Nuxt.js](https://nuxtjs.org/).
 
-CENO client: 28729/udp \
-Caddy (webserver): 443/tcp, 80/tcp, 8448/tcp \
-DeltaChat (postfix/dovecot): 587/tcp 143/tcp
-
-* Note: `dcomms` leverages docker host networking and therefore we recommend denying access to all other unnecessary ports at the host level.
-
-# Installation
-
-Point the following A records to the docker worker you wish to use for deployment:
+1. Clone the repo:
 ```
-matrix.server1.example.org -> IP of worker node
-chat.server1.example.org -> IP of worker node
-server1.example.org -> IP of worker node
+git clone git@github.com:censorship-no/dcomms-web.git
 ```
 
-Point the following MX record to the A record:
+2. Navigate to the front-end folder:
 ```
-server1.example.org -> server1.example.org
-```
-
-Clone or download this repository.  Review `./docker-compose.yml` and make any changes that may be required for your production environment.
-
-## Label
-Use labels to specify which docker nodes services should run on
-
-### Specify a docker worker node to act as a CENO bridge
-
-* Obtain the node ID of a worker.  From the manager node of the swarm type:
-```
-docker node ls
-```
-* Add the `node.labels.dwebstackrole` label to that node:
-```
-docker node update --label-add=dwebstackrole=bridge <nodeid>
+cd front/
 ```
 
-### Specify a docker worker node to host all other services
-
-* Add the `node.labels.dwebstackdomain` label that matches the subdomain you wish to provision to the node:
-```
-docker node update --label-add=dwebstackdomain=server1.example.org <nodeid>
-```
-
-## Provision
-
-Provision a dcomms server as `server1.example.org`.  From the manager node type:
-
-```
-DWEB_DOMAIN=server1.example.org ./provision.sh
-```
-
-* Note: This is an invasive action. Kindly take caution not to provision a node with the same `DWEB_DOMAIN` multiple times to prevent Synapse from overwriting data.
-
-## Redeploy
-
-In the future, to redeploy or restart all dcomms services on `server1.example.org`, from the manager node type:
-```
-DWEB_DOMAIN=server1.example.org ./redeploy.sh
-```
-
-# Post installation
-
-* Copy a pre-existing website into `/var/www` of the docker host or checkout all files from `./site` into the same location.
-* Optionally visit `https://server1.example.org` to view the website.
-* Optionally visit `https://chat.server1.example.org` to view the Element service.
-* Optionally configure a Matrix client to use `https://matrix.server1.example.org` as the homeserver.
-
-## Tagging images
-
-You may desire to tag the images within `docker-compose.yml` instead of relying upon the latest images for a more consistent deployment experience in production.
-
-# Troubleshooting
-
-## Log review
-
-To review logs, from the manager node of the swarm, type:
-```
-docker service logs dwebstack-server1_example_org_bridge -ft
-docker service logs dwebstack-server1_example_org_caddy -ft
-docker service logs dwebstack-server1_example_org_dovecot -ft
-docker service logs dwebstack-server1_example_org_element -ft
-docker service logs dwebstack-server1_example_org_mailadm -ft
-docker service logs dwebstack-server1_example_org_postfix -ft
-docker service logs dwebstack-server1_example_org_synapse -ft
-```
-
-# Front-end
-For front-end we are use [Nuxt.js](https://nuxtjs.org/)
-Front-end folder — `front`
-
-For install node dependence
+3. Install dependencies:
 ```
 yarn install
 ```
 
-For start compilation use
+4. For initial compilation use:
 ```
 yarn dev
 ```
-Apps open in standart port `http://localhost:3000`
+Apps open in standard port `http://localhost:3000`
 
-For production version need generate static files
+5. For production, you need to generate static files:
 ```
 yarn generate
 ```
+
+## Development
+
+- Static files are in the `/static/` directory
+- If you want to add a service, use `/store/index.js`
+- Translate interface in the `/lang/` directory
+
+For a detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
+
+## Contributing
+
+We welcome contributions, feature requests and bug reports in the issue tracker.
+
+## License
+
+All content is licensed under the GNU Public License v.3.0.
