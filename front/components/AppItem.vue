@@ -29,11 +29,11 @@
             :data="data.mobileApp"
             class="lg:border-r lg:border-gray-300"
           />
-
+          <hr class="lg:hidden mt-6 mr-20" />
           <AppItemPlatformItem
             desktop
             :data="data.desktopApp"
-            class="border-t lg:border-0 pt-6 mt-6 lg:pt-0 lg:mt-0"
+            class="pt-6 lg:pt-0 lg:mt-0"
           />
         </div>
       </div>

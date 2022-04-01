@@ -5,7 +5,7 @@
         <img
           width="224"
           class="logo my-6"
-          src="/eq-logo.png"
+          src="/eq-logo.svg"
           :alt="$t('org')"
         />
       </a>
