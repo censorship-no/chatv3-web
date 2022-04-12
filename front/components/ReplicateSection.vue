@@ -24,13 +24,10 @@
         </div>
 
         <ButtonGroups>
-          <input
+          <div
             id="linkMatrix"
-            value="#dcommsp2p:matrix.kyiv.dcomms.net.ua"
-            readonly
-            type="text"
             class="
-              w-[260px]
+              px-1
               min-h-[30px]
               inline-block
               text-xs
@@ -44,8 +41,10 @@
               text-center
               focus:outline-none
             "
-          />
-          <Button @click.native="doCopy()">
+          >
+            #dcommsp2p:matrix.moscow.chatv3.ru
+          </div>
+          <Button @click.native="copyDivToClipboard('linkMatrix')">
             <span class="flex flex-nowrap">
               <img src="/icons/copy.svg" class="w-4 mr-1 cursor-pointer" alt=""
             /></span>
@@ -65,17 +64,10 @@
 </template>
 
 <script>
+import copy from "~/mixins/copy.js";
+
 export default {
   name: "ReplicateSection",
-  methods: {
-    doCopy() {
-      var copyText = document.getElementById("linkMatrix");
-
-      /* Select the text field */
-      copyText.select();
-      copyText.setSelectionRange(0, 99999);
-      /* For mobile devices */ navigator.clipboard.writeText(copyText.value);
-    },
-  },
+  mixins: [copy],
 };
 </script>

@@ -28,13 +28,10 @@
           v-if="itemServers.type === 'copy'"
         >
           <ButtonGroups>
-            <input
-              id="text"
-              :value="itemServers.name[$i18n.locale]"
-              readonly
-              type="text"
+            <div
+              id="adresServer"
               class="
-                max-w-[70%]
+                px-1
                 min-h-[30px]
                 inline-block
                 text-xs
@@ -48,8 +45,10 @@
                 text-center
                 focus:outline-none
               "
-            />
-            <Button @click.native="doCopy()">
+            >
+              {{ itemServers.name[$i18n.locale] }}
+            </div>
+            <Button @click.native="copyDivToClipboard('adresServer')">
               <span class="flex flex-nowrap">
                 <img
                   src="/icons/copy.svg"
@@ -147,22 +146,16 @@
   </div>
 </template>
 <script>
+import copy from "~/mixins/copy.js";
+
 export default {
   nuxtI18n: {
     locales: ["ua", "ru", "en"],
   },
   name: "AppItemPlatformItem",
   props: { data: Object, desktop: Boolean },
-  methods: {
-    doCopy() {
-      var copyText = document.getElementById("text");
+  mixins: [copy],
 
-      /* Select the text field */
-      copyText.select();
-      copyText.setSelectionRange(0, 99999);
-      /* For mobile devices */ navigator.clipboard.writeText(copyText.value);
-    },
-  },
   computed: {
     server() {
       if (this.$t(`cities`)[`${window.location.host.split(".")[0]}`]) {

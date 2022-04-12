@@ -47,7 +47,7 @@
         </div>
 
         <Button
-          v-for="item in $store.state.servers"
+          v-for="item in servers"
           :key="item.name"
           :link="item.link"
           class="min-w-[109px]"
@@ -73,6 +73,11 @@ export default {
       } else {
         return "moscow";
       }
+    },
+    servers() {
+      return this.$store.state.servers.filter((item) => {
+        return item.link != window.location.href;
+      });
     },
   },
 };
