@@ -1,13 +1,13 @@
 export const state = () => ({
   servers: [
-    { name: "cities.moscow", link: "https://moscow.chatv3.ru" },
-    { name: "cities.piter", link: "https://piter.chatv3.ru" },
-    { name: "cities.samara", link: "https://samara.chatv3.ru" },
-    { name: "cities.krasnodar", link: "https://krasnodar.chatv3.ru" },
-    { name: "cities.ekaterinburg", link: "https://ekaterinburg.chatv3.ru" },
-    { name: "cities.novosibirsk", link: "https://novosibirsk.chatv3.ru" },
-    { name: "cities.vladivostok", link: "https://vladivostok.chatv3.ru" },
-    { name: "cities.khabarovsk", link: "https://khabarovsk.chatv3.ru" },
+    { name: "cities.moscow", link: "https://moscow.chatv3.ru/" },
+    { name: "cities.piter", link: "https://piter.chatv3.ru/" },
+    { name: "cities.samara", link: "https://samara.chatv3.ru/" },
+    { name: "cities.krasnodar", link: "https://krasnodar.chatv3.ru/" },
+    { name: "cities.ekaterinburg", link: "https://ekaterinburg.chatv3.ru/" },
+    { name: "cities.novosibirsk", link: "https://novosibirsk.chatv3.ru/" },
+    { name: "cities.vladivostok", link: "https://vladivostok.chatv3.ru/" },
+    { name: "cities.khabarovsk", link: "https://khabarovsk.chatv3.ru/" },
   ],
   items: {
     messaging: [
