@@ -11,20 +11,10 @@
     </div>
 
     <div v-for="itemServers in item" :key="itemServers.label" class="sm:pr-6">
-      <div class="mb-3 sm:flex items-center">
+      <div class="mb-3 flex items-center">
         <span
           v-if="data.serversLabel"
-          class="
-            block
-            sm:inline
-            mb-3
-            sm:mb-0
-            mr-3
-            text-sm
-            sm:min-w-[90px]
-            min-w-[80px]
-            sm:text-right
-          "
+          class="block sm:inline mr-3 text-sm min-w-[90px] text-right"
           >{{ data.serversLabel[$i18n.locale] }}</span
         >
 
@@ -38,13 +28,10 @@
           v-if="itemServers.type === 'copy'"
         >
           <ButtonGroups>
-            <input
-              id="text"
-              :value="itemServers.name[$i18n.locale]"
-              readonly
-              type="text"
+            <div
+              id="adresServer"
               class="
-                max-w-[70%]
+                px-1
                 min-h-[30px]
                 inline-block
                 text-xs
@@ -58,32 +45,22 @@
                 text-center
                 focus:outline-none
               "
-            />
-            <Button @click.native="doCopy()">
+            >
+              {{ itemServers.name[$i18n.locale] }}
+            </div>
+            <Button @click.native="copyDivToClipboard('adresServer')">
               <span class="flex flex-nowrap">
                 <img
                   src="/icons/copy.svg"
                   class="w-4 mr-1 cursor-pointer"
                   alt=""
-                /></span
-              >
+              /></span>
             </Button>
           </ButtonGroups>
         </span>
       </div>
-      <div v-if="itemServers.docs" class="sm:flex items-center mb-3">
-        <span
-          class="
-            block
-            sm:inline
-            mb-3
-            sm:mb-0
-            mr-3
-            text-sm
-            sm:min-w-[90px]
-            min-w-[80px]
-            sm:text-right
-          "
+      <div v-if="itemServers.docs" class="flex items-center mb-3">
+        <span class="block sm:inline mr-3 text-sm min-w-[90px] sm:text-right"
           >{{ $t("items.instruction") }}
         </span>
 
@@ -98,19 +75,8 @@
       </div>
     </div>
     <div class="mb-3 items-center" v-if="data.downloads">
-      <div class="sm:flex items-center">
-        <span
-          class="
-            block
-            sm:inline
-            mb-3
-            sm:mb-0
-            mr-3
-            text-sm
-            sm:min-w-[90px]
-            min-w-[80px]
-            sm:text-right
-          "
+      <div class="flex items-center">
+        <span class="block sm:inline mr-3 text-sm min-w-[90px] sm:text-right"
           >{{ $t("items.downloads") }}
         </span>
         <ButtonGroups>
@@ -147,7 +113,7 @@
       </div>
     </div>
   </div>
-  <div v-else>
+  <div v-else class="flex flex-col">
     <div
       class="mb-5 text-sm font-semibold uppercase text-gray-600"
       v-if="desktop"
@@ -157,46 +123,47 @@
     <div class="mb-5 text-sm font-semibold uppercase text-gray-600" v-else>
       {{ $t("items.mobileApp") }}
     </div>
-    <span
+    <div
       class="
-        inline-block
         bg-gray-50
-        border border-gray-300
         rounded-lg
-        py-3
+        py-8
         px-5
+        w-full
+        flex
+        items-center
+        justify-center
       "
+      style="flex-basis: 100%"
     >
-      <img src="/icons/fail.svg" alt="" class="w-8 inline mr-2" />
+      <img
+        src="/icons/fail.svg"
+        alt=""
+        class="mr-2 max-w-[30px] max-h-[30px]"
+      />
       <span class="text-gray-700 text-lg">{{ $t("items.notAvail") }}</span>
-    </span>
+    </div>
   </div>
 </template>
 <script>
+import copy from "~/mixins/copy.js";
+
 export default {
   nuxtI18n: {
     locales: ["ua", "ru", "en"],
   },
   name: "AppItemPlatformItem",
   props: { data: Object, desktop: Boolean },
-  methods: {
-    doCopy() {
-      var copyText = document.getElementById("text");
+  mixins: [copy],
 
-      /* Select the text field */
-      copyText.select();
-      copyText.setSelectionRange(0, 99999);
-      /* For mobile devices */ navigator.clipboard.writeText(copyText.value);
-    },
-  },
   computed: {
     server() {
       if (this.$t(`cities`)[`${window.location.host.split(".")[0]}`]) {
         return window.location.host.split(".")[1]
           ? window.location.host.split(".")[0]
-          : "moscow";
+          : "kyiv";
       } else {
-        return "moscow";
+        return "kyiv";
       }
     },
     item() {

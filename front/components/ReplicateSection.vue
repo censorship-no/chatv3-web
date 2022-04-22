@@ -14,23 +14,20 @@
       <img src="/icons/clone.svg" class="mr-3 w-10" alt="" />
       <span class="text-2xl font-bold">{{ $t("alert.title") }}</span>
     </div>
-    <div class="col-span-12 lg:col-span-3">
+    <div class="col-span-12 lg:col-span-4">
       <p class="text-sm">{{ $t("alert.descr") }}</p>
     </div>
-    <div class="col-span-12 lg:col-span-5 flex lg:justify-end">
+    <div class="col-span-12 lg:col-span-4 flex">
       <div>
         <div class="mb-1 text-sm sm:min-w-[90px] min-w-[80px]">
           {{ $t("alert.buttons.servers") }}
         </div>
 
         <ButtonGroups>
-          <input
+          <div
             id="linkMatrix"
-            value="#chatv3p2p:matrix.piter.chatv3.ru"
-            readonly
-            type="text"
             class="
-              w-[260px]
+              px-1
               min-h-[30px]
               inline-block
               text-xs
@@ -44,15 +41,13 @@
               text-center
               focus:outline-none
             "
-          />
-          <Button @click.native="doCopy()">
+          >
+            #dcommsp2p:matrix.moscow.chatv3.ru
+          </div>
+          <Button @click.native="copyDivToClipboard('linkMatrix')">
             <span class="flex flex-nowrap">
-              <img
-                src="/icons/copy.svg"
-                class="w-4 mr-1 cursor-pointer"
-                alt=""
-              /></span
-            >
+              <img src="/icons/copy.svg" class="w-4 mr-1 cursor-pointer" alt=""
+            /></span>
           </Button>
         </ButtonGroups>
         <Button link="https://github.com/censorship-no/dcomms" class="mt-2">{{
@@ -69,17 +64,10 @@
 </template>
 
 <script>
+import copy from "~/mixins/copy.js";
+
 export default {
   name: "ReplicateSection",
-  methods: {
-    doCopy() {
-      var copyText = document.getElementById("linkMatrix");
-
-      /* Select the text field */
-      copyText.select();
-      copyText.setSelectionRange(0, 99999);
-      /* For mobile devices */ navigator.clipboard.writeText(copyText.value);
-    },
-  },
+  mixins: [copy],
 };
 </script>
