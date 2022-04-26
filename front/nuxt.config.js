@@ -16,7 +16,7 @@ export default {
     },
     title: "ChatV3",
     description:
-      "Децентралізовані комунікації, які працюють з інтернетом або без нього",
+      "Подборка децентрализованных сервисов, которые вы сможете использовать когда Telegram, Whatsapp, Facebook будут более недоступны",
     meta: [
       {
         hid: "og:image:alt",
@@ -47,7 +47,7 @@ export default {
         hid: "description",
         name: "description",
         content:
-          "Децентралізовані комунікації, які працюють з інтернетом або без нього",
+          "Подборка децентрализованных сервисов, которые вы сможете использовать когда Telegram, Whatsapp, Facebook будут более недоступны",
       },
       {
         hid: "twitter:title",
@@ -58,7 +58,7 @@ export default {
         hid: "twitter:description",
         name: "twitter:description",
         content:
-          "Децентралізовані комунікації, які працюють з інтернетом або без нього",
+          "Подборка децентрализованных сервисов, которые вы сможете использовать когда Telegram, Whatsapp, Facebook будут более недоступны",
       },
 
       {
@@ -91,7 +91,7 @@ export default {
         hid: "og:description",
         property: "og:description",
         content:
-          "Децентралізовані комунікації, які працюють з інтернетом або без нього",
+          "Подборка децентрализованных сервисов, которые вы сможете использовать когда Telegram, Whatsapp, Facebook будут более недоступны",
       },
 
       {
@@ -122,7 +122,7 @@ export default {
       lang: "ua",
       display: "standalone",
       description:
-        "Децентралізовані комунікації, які працюють з інтернетом або без нього",
+        "Подборка децентрализованных сервисов, которые вы сможете использовать когда Telegram, Whatsapp, Facebook будут более недоступны",
       theme_color: "#111111",
       icons: [
         {
