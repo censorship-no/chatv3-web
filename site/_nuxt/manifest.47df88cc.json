@@ -1,7 +1,7 @@
 {
   "name": "ChatV3",
   "short_name": "ChatV3",
-  "description": "Децентралізовані комунікації, які працюють з інтернетом або без нього",
+  "description": "Подборка децентрализованных сервисов, которые вы сможете использовать когда Telegram, Whatsapp, Facebook будут более недоступны",
   "icons": [
     {
       "src": "/android-chrome-192x192.svg",
