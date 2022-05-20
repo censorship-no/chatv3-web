@@ -17,48 +17,56 @@ const IndexPage = ({data}) => {
         siteUrl: "https://moscow.chatv3.ru",
         matrixUrl: "matrix.moscow.chatv3.ru",
         elementUrl: "https://chat.moscow.chatv3.ru",
+        deltaChatUrl: "/static/dcaccount-moscow.chatv3.ru-KwNAtP6J.png",
     },
     {
         title: "Санкт-Петербург",
         siteUrl: "https://piter.chatv3.ru",
         matrixUrl: "matrix.piter.chatv3.ru",
         elementUrl: "https://chat.piter.chatv3.ru",
+        deltaChatUrl: "/static/dcaccount-piter.chatv3.ru-KwNAtP6J.png",
     },
     {
         title: "Самара",
         siteUrl: "https://samara.chatv3.ru",
         matrixUrl: "matrix.samara.chatv3.ru",
         elementUrl: "https://chat.samara.chatv3.ru",
+        deltaChatUrl: "/static/dcaccount-samara.chatv3.ru-KwNAtP6J.png",
     },
     {
         title: "Краснодар",
         siteUrl: "https://krasnodar.chatv3.ru",
         matrixUrl: "matrix.krasnodar.chatv3.ru",
         elementUrl: "https://chat.krasnodar.chatv3.ru",
+        deltaChatUrl: "/static/dcaccount-krasnodar.chatv3.ru-KwNAtP6J.png",
     },
     {
         title: "Екатеринбург",
         siteUrl: "https://ekaterinburg.chatv3.ru",
         matrixUrl: "matrix.ekaterinburg.chatv3.ru",
         elementUrl: "https://chat.ekaterinburg.chatv3.ru",
+        deltaChatUrl: "/static/dcaccount-ekaterinburg.chatv3.ru-KwNAtP6J.png",
     },
     {
         title: "Новосибирск",
         siteUrl: "https://novosibirsk.chatv3.ru",
         matrixUrl: "matrix.novosibirsk.chatv3.ru",
         elementUrl: "https://chat.novosibirsk.chatv3.ru",
+        deltaChatUrl: "/static/dcaccount-novosibirsk.chatv3.ru-KwNAtP6J.png",
     },
     {
         title: "Владивосток",
         siteUrl: "https://vladivostok.chatv3.ru",
         matrixUrl: "matrix.vladivostok.chatv3.ru",
         elementUrl: "https://chat.vladivostok.chatv3.ru",
+        deltaChatUrl: "/static/dcaccount-vladivostok.chatv3.ru-KwNAtP6J.png",
     },
     {
         title: "Хабаровск",
         siteUrl: "https://khabarovsk.chatv3.ru",
         matrixUrl: "matrix.khabarovsk.chatv3.ru",
         elementUrl: "https://chat.khabarovsk.chatv3.ru",
+        deltaChatUrl: "/static/dcaccount-khabarovsk.chatv3.ru-KwNAtP6J.png",
     },
   ];
 
@@ -68,7 +76,7 @@ const IndexPage = ({data}) => {
 
   const [currentMatrixUrl,setCurrentMatrixUrl] = useState(servers[0].matrixUrl)
   const [currentElementUrl,setCurrentElementUrl] = useState(servers[0].elementUrl)
-  const [currentDeltaQRUrl,setCurrentDeltaQRUrl] = useState(servers[0].siteUrl+'/qr.png')
+  const [currentDeltaQRUrl,setCurrentDeltaQRUrl] = useState(servers[0].deltaChatUrl)
 
   const onMatrixServerSelect = (event) => {
     let value = event.target.value
@@ -79,7 +87,9 @@ const IndexPage = ({data}) => {
 
   const onDeltaServerSelect = (event) => {
     let value = event.target.value
-    setCurrentDeltaQRUrl(value+'/qr.png')
+    value = value.replace('matrix.', '/static/dcaccount-')
+    value = value + '-KwNAtP6J.png'
+    setCurrentDeltaQRUrl(value)
   }
 
   return (
