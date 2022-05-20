@@ -72,7 +72,7 @@ const IndexPage = ({data}) => {
 
   const serversList = servers.map((item) => <a href={item.siteUrl} className="btn">{item.title}</a>);
   const matrixServersSelect = servers.map((item) => <option value={item.matrixUrl}>{item.title}</option>);
-  const deltaServersSelect = servers.map((item) => <option value={item.siteUrl}>{item.title}</option>);
+  const deltaServersSelect = servers.map((item) => <option value={item.deltaChatUrl}>{item.title}</option>);
 
   const [currentMatrixUrl,setCurrentMatrixUrl] = useState(servers[0].matrixUrl)
   const [currentElementUrl,setCurrentElementUrl] = useState(servers[0].elementUrl)
@@ -87,8 +87,8 @@ const IndexPage = ({data}) => {
 
   const onDeltaServerSelect = (event) => {
     let value = event.target.value
-    value = value.replace('matrix.', '/static/dcaccount-')
-    value = value + '-KwNAtP6J.png'
+    //value = value.replace('matrix.', '/static/dcaccount-')
+    //value = value + '-KwNAtP6J.png'
     setCurrentDeltaQRUrl(value)
   }
 
