@@ -43,12 +43,6 @@ const IndexPage = ({data}) => {
         elementUrl: "https://chat.ekaterinburg.chatv3.ru",
     },
     {
-        title: "Хабаровск",
-        siteUrl: "https://khabarovsk.chatv3.ru",
-        matrixUrl: "matrix.khabarovsk.chatv3.ru",
-        elementUrl: "https://chat.khabarovsk.chatv3.ru",
-    },
-    {
         title: "Новосибирск",
         siteUrl: "https://novosibirsk.chatv3.ru",
         matrixUrl: "matrix.novosibirsk.chatv3.ru",
@@ -59,7 +53,13 @@ const IndexPage = ({data}) => {
         siteUrl: "https://vladivostok.chatv3.ru",
         matrixUrl: "matrix.vladivostok.chatv3.ru",
         elementUrl: "https://chat.vladivostok.chatv3.ru",
-    }
+    },
+    {
+        title: "Хабаровск",
+        siteUrl: "https://khabarovsk.chatv3.ru",
+        matrixUrl: "matrix.khabarovsk.chatv3.ru",
+        elementUrl: "https://chat.khabarovsk.chatv3.ru",
+    },
   ];
 
   const serversList = servers.map((item) => <a href={item.siteUrl} className="btn">{item.title}</a>);
