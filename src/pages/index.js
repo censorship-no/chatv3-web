@@ -221,7 +221,7 @@ const IndexPage = ({data}) => {
                     <span>Инструкции</span>
                     <div className="btn-group">
                       <a
-                        href="/element_mac.pdf"
+                        href="/package/element_mac.pdf"
                         target="_blank"
                         className="btn btn-small"
                       >
@@ -263,7 +263,7 @@ const IndexPage = ({data}) => {
                     <span>Инструкции</span>
                     <div className="btn-group">
                       <a
-                        href="/element_ios.pdf"
+                        href="/package/element_ios.pdf"
                         target="_blank"
                         className="btn btn-small"
                       >
@@ -339,7 +339,7 @@ const IndexPage = ({data}) => {
                     <span>Инструкции</span>
                     <div className="btn-group">
                       <a
-                        href="/delta_macos.pdf"
+                        href="/package/delta_macos.pdf"
                         target="_blank"
                         className="btn btn-small"
                       >
@@ -383,7 +383,7 @@ const IndexPage = ({data}) => {
                     <span>Инструкции</span>
                     <div className="btn-group">
                       <a
-                        href="/delta_ios.pdf"
+                        href="/package/delta_ios.pdf"
                         target="_blank"
                         className="btn btn-small"
                       >
@@ -518,7 +518,7 @@ const IndexPage = ({data}) => {
                     <span>Инструкции</span>
                     <div className="btn-group">
                       <a
-                        href="/newnode_ios.pdf"
+                        href="/package/newnode_ios.pdf"
                         target="_blank"
                         className="btn btn-small"
                       >
