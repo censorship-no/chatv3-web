@@ -48,7 +48,7 @@ const IndexPage = () => (
                 formats={["auto", "webp", "avif"]}
                 alt=""
                 height={500}
-                className="card-item-logo"
+                className="card-item-screenshot"
               />
               <StaticImage
                 src="../images/delta-android/2.jpg"
@@ -56,7 +56,7 @@ const IndexPage = () => (
                 formats={["auto", "webp", "avif"]}
                 alt=""
                 height={500}
-                className="card-item-logo"
+                className="card-item-screenshot"
               />
               <p className="card-item-install-text">Для подключения к серверу кликаем на “Сканировать QR-код”. Разрешаем приложению Delta Chat снимать фото и видео. </p>
               <p className="card-item-install-text">Ссылки на QR-кода для подключения к серверам вы можете найти на <a href="/">Главной странице</a> Chatv3. </p>
@@ -70,7 +70,7 @@ const IndexPage = () => (
                 formats={["auto", "webp", "avif"]}
                 alt=""
                 height={500}
-                className="card-item-logo"
+                className="card-item-screenshot"
               />
               <StaticImage
                 src="../images/delta-android/4.jpg"
@@ -78,7 +78,7 @@ const IndexPage = () => (
                 formats={["auto", "webp", "avif"]}
                 alt=""
                 height={500}
-                className="card-item-logo"
+                className="card-item-screenshot"
               />
               <p className="card-item-install-number">ШАГ 2</p>
               <p className="card-item-install-text">
@@ -93,7 +93,7 @@ const IndexPage = () => (
                 formats={["auto", "webp", "avif"]}
                 alt=""
                 height={500}
-                className="card-item-logo"
+                className="card-item-screenshot"
               />
               <StaticImage
                 src="../images/delta-android/4.2.jpg"
@@ -101,7 +101,7 @@ const IndexPage = () => (
                 formats={["auto", "webp", "avif"]}
                 alt=""
                 height={500}
-                className="card-item-logo"
+                className="card-item-screenshot"
               />
               <p className="card-item-install-text">Отлично! Дело в шляпе. Осталось освоить азы использования приложения.</p>
               <p className="card-item-install-number">ШАГ 3</p>
@@ -114,7 +114,7 @@ const IndexPage = () => (
                 formats={["auto", "webp", "avif"]}
                 alt=""
                 height={500}
-                className="card-item-logo"
+                className="card-item-screenshot"
               />
               <StaticImage
                 src="../images/delta-android/5.jpg"
@@ -122,7 +122,7 @@ const IndexPage = () => (
                 formats={["auto", "webp", "avif"]}
                 alt=""
                 height={500}
-                className="card-item-logo"
+                className="card-item-screenshot"
               />
               </div>
               <div className="card-item-install-item">
@@ -134,7 +134,7 @@ const IndexPage = () => (
                 formats={["auto", "webp", "avif"]}
                 alt=""
                 height={500}
-                className="card-item-logo"
+                className="card-item-screenshot"
               />
 
               <p className="card-item-install-text">
@@ -157,7 +157,7 @@ const IndexPage = () => (
                 formats={["auto", "webp", "avif"]}
                 alt=""
                 height={500}
-                className="card-item-logo"
+                className="card-item-screenshot"
               />
               <StaticImage
                 src="../images/delta-android/8.jpg"
@@ -165,7 +165,7 @@ const IndexPage = () => (
                 formats={["auto", "webp", "avif"]}
                 alt=""
                 height={500}
-                className="card-item-logo"
+                className="card-item-screenshot"
               />
 
               </div>
@@ -180,7 +180,7 @@ const IndexPage = () => (
                 formats={["auto", "webp", "avif"]}
                 alt=""
                 height={500}
-                className="card-item-logo"
+                className="card-item-screenshot"
               />
               <StaticImage
                 src="../images/delta-android/10.jpg"
@@ -188,7 +188,7 @@ const IndexPage = () => (
                 formats={["auto", "webp", "avif"]}
                 alt=""
                 height={500}
-                className="card-item-logo"
+                className="card-item-screenshot"
               />
 
               <p className="card-item-install-text">Вы можете отправить будущему адресату скриншот QR-кода или воспользоваться иконкой “Поделиться” в правом верхнем углу экрана: </p>
@@ -199,7 +199,7 @@ const IndexPage = () => (
                 formats={["auto", "webp", "avif"]}
                 alt=""
                 height={500}
-                className="card-item-logo"
+                className="card-item-screenshot"
               />
 
               </div>
@@ -214,7 +214,7 @@ const IndexPage = () => (
                 formats={["auto", "webp", "avif"]}
                 alt=""
                 height={500}
-                className="card-item-logo"
+                className="card-item-screenshot"
               />
 
               <p className="card-item-install-text">Разумеется, перед тем, как это делать, следует попросить своего будущего адресата поделиться с вами QR-кодом через другое приложение или, если человек находится радом с вами – попросить его открыть свой QR-код, как описано в пункте 2.</p>
@@ -225,7 +225,7 @@ const IndexPage = () => (
                 formats={["auto", "webp", "avif"]}
                 alt=""
                 height={500}
-                className="card-item-logo"
+                className="card-item-screenshot"
               />
 
               </div>
@@ -240,7 +240,7 @@ const IndexPage = () => (
                 formats={["auto", "webp", "avif"]}
                 alt=""
                 height={500}
-                className="card-item-logo"
+                className="card-item-screenshot"
               />
 
               <p className="card-item-install-text">Перед вами, новый экран, в верхней части которого расположена строка для ввода адреса вашего будущего собеседника. Сюда можно ввести как адрес, созданный в Delta Chat, так и любой другой почтовый адрес. После этого приложение попросит вашего разрешения создать чат с владельцем адреса, который вы только что ввели. Нажмите “Ок”, если все верно. </p>
@@ -251,7 +251,7 @@ const IndexPage = () => (
                 formats={["auto", "webp", "avif"]}
                 alt=""
                 height={500}
-                className="card-item-logo"
+                className="card-item-screenshot"
               />
               <StaticImage
                 src="../images/delta-android/15.1.jpg"
@@ -259,7 +259,7 @@ const IndexPage = () => (
                 formats={["auto", "webp", "avif"]}
                 alt=""
                 height={500}
-                className="card-item-logo"
+                className="card-item-screenshot"
               />
 
               <p className="card-item-install-text">Отлично! Можно начинать общение.</p>
@@ -270,7 +270,7 @@ const IndexPage = () => (
                 formats={["auto", "webp", "avif"]}
                 alt=""
                 height={500}
-                className="card-item-logo"
+                className="card-item-screenshot"
               />
 
               </div>
@@ -285,7 +285,7 @@ const IndexPage = () => (
                 formats={["auto", "webp", "avif"]}
                 alt=""
                 height={500}
-                className="card-item-logo"
+                className="card-item-screenshot"
               />
               <StaticImage
                 src="../images/delta-android/16.jpg"
@@ -293,7 +293,7 @@ const IndexPage = () => (
                 formats={["auto", "webp", "avif"]}
                 alt=""
                 height={500}
-                className="card-item-logo"
+                className="card-item-screenshot"
               />
               <StaticImage
                 src="../images/delta-android/17.jpg"
@@ -301,7 +301,7 @@ const IndexPage = () => (
                 formats={["auto", "webp", "avif"]}
                 alt=""
                 height={500}
-                className="card-item-logo"
+                className="card-item-screenshot"
               />
 
               <p className="card-item-install-text">Если вы, например, создаете семейный чат и предварительно добавили адреса всех членов семьи по принципу, описанному в пунктах 3 и 4 этой инструкции, то вам будет значительно проще добавить всех в группу, Для этого нужно просто отметить имена из списка кликнув на чекбоксы справа.</p>

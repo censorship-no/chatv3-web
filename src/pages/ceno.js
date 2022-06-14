@@ -62,7 +62,7 @@ const IndexPage = () => (
                   formats={["auto", "webp", "avif"]}
                   alt=""
                   height={500}
-                  className="card-item-logo"
+                  className="card-item-screenshot"
                 />
                 <p className="card-item-install-text">
                 Когда вы просматриваете сайты в обычных вкладках, то анонимно делитесь контентом через сеть CENO с другими пользователями. Приватные вкладки предназначены для страниц с авторизацией и с контентом, которым вы не хотите делиться.
@@ -85,7 +85,7 @@ const IndexPage = () => (
                   formats={["auto", "webp", "avif"]}
                   alt=""
                   height={500}
-                  className="card-item-logo"
+                  className="card-item-screenshot"
                 />
               </div>
               <div className="card-item-install-item">
@@ -101,7 +101,7 @@ const IndexPage = () => (
                   formats={["auto", "webp", "avif"]}
                   alt=""
                   height={500}
-                  className="card-item-logo"
+                  className="card-item-screenshot"
                 />
                 <p className="card-item-install-text">
                 uBlock Origin представляет собой хорошо многим знакомый блокировщик рекламы с открытым кодом. Вы можете включить блокировщик в целях экономии трафика с параметрами по умолчанию. Для настройки плагина рекомендуем обратиться к актуальной документации на официальном сайте <a href="https://ublockorigin.com/ru" target="_blank">https://ublockorigin.com/ru</a>.
@@ -112,7 +112,7 @@ const IndexPage = () => (
                   formats={["auto", "webp", "avif"]}
                   alt=""
                   height={500}
-                  className="card-item-logo"
+                  className="card-item-screenshot"
                 />
                 </div>
             </div>

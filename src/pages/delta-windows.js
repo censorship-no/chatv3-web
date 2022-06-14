@@ -43,7 +43,7 @@ const IndexPage = () => (
                   formats={["auto", "webp", "avif"]}
                   alt=""
                   height={500}
-                  className="card-item-logo"
+                  className="card-item-screenshot"
                 />
                 <p className="card-item-install-number">ШАГ 1</p>
                 <p className="card-item-install-text">
@@ -77,7 +77,7 @@ const IndexPage = () => (
                   formats={["auto", "webp", "avif"]}
                   alt=""
                   height={500}
-                  className="card-item-logo"
+                  className="card-item-screenshot"
                 />
                 <p className="card-item-install-text">
                 Рекомендуется установить программу из Microsoft Store. Но если у вас возникнут проблемы с доступом к сервисам Microsoft – можно загрузить отдельный дистрибутив Delta.Chat и установить его.
@@ -100,7 +100,7 @@ sudo dpkg -i deltachat-desktop_1.26.0_amd64.deb
                   formats={["auto", "webp", "avif"]}
                   alt=""
                   height={500}
-                  className="card-item-logo"
+                  className="card-item-screenshot"
                 />
                 <p className="card-item-install-number">ШАГ 2</p>
                 <p className="card-item-install-text">
@@ -121,7 +121,7 @@ sudo dpkg -i deltachat-desktop_1.26.0_amd64.deb
                   formats={["auto", "webp", "avif"]}
                   alt=""
                   height={500}
-                  className="card-item-logo"
+                  className="card-item-screenshot"
                 />
                 <p className="card-item-install-text">
                 Нажмите Разрешить доступ. Без этого разрешения Delta.Chat не сможет отправлять и получать сообщения. А вот разрешения в Android носят рекомендательный характер. Вы можете решить сами, предоставлять ли приложению доступ к камере, контактам, микрофону и памяти устройства. Вы можете сами выбирать баланс между безопасностью и удобством использования Delta.Chat.
@@ -135,7 +135,7 @@ sudo dpkg -i deltachat-desktop_1.26.0_amd64.deb
                   formats={["auto", "webp", "avif"]}
                   alt=""
                   height={500}
-                  className="card-item-logo"
+                  className="card-item-screenshot"
                 />
                 <p className="card-item-install-text">
                 Рассмотрим подключение с двухфакторной аутентификацией в Windows на примере Gmail. Вы можете ознакомиться с <a href="https://support.google.com/accounts/answer/185833" target="_blank">официальной инструкцией</a> или:
@@ -153,7 +153,7 @@ sudo dpkg -i deltachat-desktop_1.26.0_amd64.deb
                   formats={["auto", "webp", "avif"]}
                   alt=""
                   height={500}
-                  className="card-item-logo"
+                  className="card-item-screenshot"
                 />
                 <p className="card-item-install-text">Нажмите кнопку Создать. И из полученного окна введите пароль в соответствующее поле настроек Delta.Chat.</p>
                 <p className="card-item-install-text">
@@ -170,7 +170,7 @@ sudo dpkg -i deltachat-desktop_1.26.0_amd64.deb
                   formats={["auto", "webp", "avif"]}
                   alt=""
                   height={500}
-                  className="card-item-logo"
+                  className="card-item-screenshot"
                 />
                 <p className="card-item-install-number">ШАГ 3</p>
                 <p className="card-item-install-text">

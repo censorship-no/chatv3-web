@@ -405,6 +405,11 @@ p {
         }
     }
 
+    &-screenshot {
+        margin-right: 23px;
+        min-width: 48px;
+    }
+
     &-text {
         &-badge {
             margin: 0 0 5px;

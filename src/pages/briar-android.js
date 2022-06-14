@@ -76,7 +76,7 @@ const IndexPage = () => (
                   formats={["auto", "webp", "avif"]}
                   alt=""
                   height={500}
-                  className="card-item-logo"
+                  className="card-item-screenshot"
                 />
                 <p className="card-item-install-number">Шаг 2. Регистрация</p>
                 <p className="card-item-install-text">
@@ -90,7 +90,7 @@ const IndexPage = () => (
                   formats={["auto", "webp", "avif"]}
                   alt=""
                   height={500}
-                  className="card-item-logo"
+                  className="card-item-screenshot"
                 />
                 <p className="card-item-install-text">
                   На следующем этапе вам предагается так же разрешить фоновые
@@ -107,7 +107,7 @@ const IndexPage = () => (
                   formats={["auto", "webp", "avif"]}
                   alt=""
                   height={500}
-                  className="card-item-logo"
+                  className="card-item-screenshot"
                 />
                 <p className="card-item-install-text">
                   Осталось добавить контакты.
@@ -120,7 +120,7 @@ const IndexPage = () => (
                   formats={["auto", "webp", "avif"]}
                   alt=""
                   height={500}
-                  className="card-item-logo"
+                  className="card-item-screenshot"
                 />
                 <p className="card-item-install-number">
                   Шаг 3. Добавление контактов и обмен сообщениями
@@ -140,7 +140,7 @@ const IndexPage = () => (
                   formats={["auto", "webp", "avif"]}
                   alt=""
                   height={500}
-                  className="card-item-logo"
+                  className="card-item-screenshot"
                 />
                 <p className="card-item-install-text">
                   Просто передайте сгенерированную ссылку контакту, получите
@@ -153,7 +153,7 @@ const IndexPage = () => (
                   formats={["auto", "webp", "avif"]}
                   alt=""
                   height={500}
-                  className="card-item-logo"
+                  className="card-item-screenshot"
                 />
                 <p className="card-item-install-text">
                   Задайте понятный для вас ник для контакта. Вряд ли стоит
@@ -165,7 +165,7 @@ const IndexPage = () => (
                   formats={["auto", "webp", "avif"]}
                   alt=""
                   height={500}
-                  className="card-item-logo"
+                  className="card-item-screenshot"
                 />
                 <p className="card-item-install-text">
                   Дождитесь аналогичных действий со стороны вашего контакта.
@@ -176,7 +176,7 @@ const IndexPage = () => (
                   formats={["auto", "webp", "avif"]}
                   alt=""
                   height={500}
-                  className="card-item-logo"
+                  className="card-item-screenshot"
                 />
                 <p className="card-item-install-text">
                   Поздравляю, теперь вам есть с кем общаться в Briar. Повторите
@@ -208,7 +208,7 @@ const IndexPage = () => (
                   formats={["auto", "webp", "avif"]}
                   alt=""
                   height={500}
-                  className="card-item-logo"
+                  className="card-item-screenshot"
                 />
               </div>
               <div className="card-item-install-item">

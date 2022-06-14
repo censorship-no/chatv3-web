@@ -54,7 +54,7 @@ const IndexPage = () => (
                 formats={["auto", "webp", "avif"]}
                 alt=""
                 height={500}
-                className="card-item-logo"
+                className="card-item-screenshot"
               />
               <p className="card-item-install-number">ШАГ 1</p>
               <p className="card-item-install-text">Зайдите в на официальный сайт проекта и установите приложение для Android или iPhone. После установки запустите NewNode VPN. </p>
@@ -78,7 +78,7 @@ const IndexPage = () => (
                 formats={["auto", "webp", "avif"]}
                 alt=""
                 height={500}
-                className="card-item-logo"
+                className="card-item-screenshot"
               />
               <p className="card-item-install-number">ШАГ 2</p>
               <p className="card-item-install-text">При первом запуске надо ответить на несколько запросов приложения. Разрешить NewNode настроить VPN-соединение — нажмите ОК. </p>
@@ -90,7 +90,7 @@ const IndexPage = () => (
                 formats={["auto", "webp", "avif"]}
                 alt=""
                 height={500}
-                className="card-item-logo"
+                className="card-item-screenshot"
               />
               <p className="card-item-install-number">ШАГ 3</p>
               <p className="card-item-install-text">И второе, приложение сообщает, что будут обнаруживаться расположенные рядом устройства с использованием геолокации устройства. Нажмите ОК.</p>
@@ -102,7 +102,7 @@ const IndexPage = () => (
                 formats={["auto", "webp", "avif"]}
                 alt=""
                 height={500}
-                className="card-item-logo"
+                className="card-item-screenshot"
               />
               <p className="card-item-install-number">ШАГ 4</p>
               <p className="card-item-install-text">Приложение не имеет дополнительных настроек, с помощью кнопки по центру экрана вы можете только выключить или включить соединение. Текущее состояние выводится ниже кнопки: CONNECTED (подключено) или DISCONNECTED (отключено). В качестве статистики использования (USAGE), внизу экрана выводится объем прямого трафика (Direct) и трафика через узлы NewNode (Through Peers). </p>
