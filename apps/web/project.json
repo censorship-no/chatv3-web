@@ -1,0 +1,46 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/web/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/gatsby:build",
+      "options": {
+        "outputPath": "apps/web/public",
+        "uglify": true,
+        "color": true,
+        "profile": false
+      },
+      "configurations": {
+        "production": {}
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/gatsby:server",
+      "options": {
+        "buildTarget": "web:build"
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "web:build:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/web/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/web"],
+      "options": {
+        "jestConfig": "apps/web/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

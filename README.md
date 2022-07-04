@@ -1,105 +1,106 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.com">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby's default starter
-</h1>
+# Установка и запуск внутри nodeenv для разработки
 
-Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+Находясь в папке проекта выполните следующие команды:
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.com/docs/gatsby-starters/)._
+```bash
+nodeenv --node=18.2.0 ./nodeenv
+source ./nodeenv/bin/activate
+npm install -g pnpm
+pnpm install
+export NODE_OPTIONS=--no-experimental-fetch
+pnpm run start
+```
 
-## 🚀 Quick start
+Последняя команда запустит два сервиса для локальной разработки:
+http://localhost:3333 - sanity
+http://localhost:4200 - web
 
-1.  **Create a Gatsby site.**
+Также есть возможность запуска каждого приложения в режиме разработчика по отдельности.
+Для этого необходимо в папке каждого приложения выполнить команду
 
-    Use the Gatsby CLI ([install instructions](https://www.gatsbyjs.com/docs/tutorial/part-0/#gatsby-cli)) to create a new site, specifying the default starter.
+```bash
+pnpm run serve
+```
+Список доступных команд можно посмотреть в файлах package.json
 
-    ```shell
-    # create a new Gatsby site using the default starter
-    gatsby new my-default-starter https://github.com/gatsbyjs/gatsby-starter-default
-    ```
+Для того чтобы свежие правки попали на продакшен сайт, после каждого изменения в Sanity необходимо запустить сборку и деплой web приложения.
 
-1.  **Start developing.**
+Для сборки проекта доступны следующие команды
+```bash
+# Запуск сборки проекта sanity и статического сайта на gatsby
+# файлы будут доступны по этим путям
+# apps/studio/dist - проект sanity
+# apps/web/public - сайт на gatsby
+pnpm run build
+```
+Также доступна сбрка для каждого из проектов по-отдельности
+```bash
+pnpm run build:sanity # сборка в папку apps/studio/dist
+```
+и
+```bash
+pnpm run build:web # сборка в папку apps/web/public
+```
 
-    Navigate into your new site’s directory and start it up.
+Экспорт схемы GraphQl
 
-    ```shell
-    cd my-default-starter/
-    gatsby develop
-    ```
+в папке с проектом sanity запустить команду
+```bash
+npx sanity graphql list
 
-1.  **Open the source code and start editing!**
+```
 
-    Your site is now running at `http://localhost:8000`!
+## Порядок изменения схемы
 
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby Tutorial](https://www.gatsbyjs.com/docs/tutorial/part-4/#use-graphiql-to-explore-the-data-layer-and-write-graphql-queries)._
+1. Правка схемы в `apps/studio`
+2. Экспорт схемы
+```bash
 
-    Open the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+pnpm run graphql-deploy
+# Возможно потребуется логин в  sanity. Для логина запустите
+# npx sanity login
+```
+3. Опционально. Экспорт TS схемы
 
-## 🚀 Quick start (Gatsby Cloud)
+В папке `apps/web`
+4. Очистить кеш Gatsby
+```bash
+pnpm run clean-cache
+```
+5. Запустить сборку Gatsby (dev или prod в зависимости от задачи)
 
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
 
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-default)
 
-## 🧐 What's inside?
+## Tips & tricks
 
-A quick look at the top-level files and directories you'll see in a Gatsby project.
 
-    .
-    ├── node_modules
-    ├── src
-    ├── .gitignore
-    ├── .prettierrc
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package-lock.json
-    ├── package.json
-    └── README.md
+### Экспорт типов
+При изменении схемы может быть полезно сделать экспорт типов Typescript на основе схемы Sanity
 
-1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
+Чтобы это сделать запустите команду
+```bash
+pnpm run types
+```
 
-2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
+Готовые файлы будут экспортированы в папку `apps/web/typings/schema.ts`
 
-3.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
+NB: При экспорте типов в итоговый файл также попадают внутренние мета дженерики. Для корректного использования типов требуется удалить дженерики `SanityReference` и `SanityKeyedReference` из файла `apps/web/typings/schema.ts`
 
-4.  **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
 
-5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-browser/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
+### Экспорт GraphQL схемы
 
-6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/) for more detail).
+From here https://github.com/sanity-io/sanity/issues/2533
 
-7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-node/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
+This is not documented, as the primary intention is not for it to be used by users, but there is a way to get the schema. You can currently get it in two different formats.
 
-8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-ssr/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
-
-9.  **`LICENSE`**: This Gatsby starter is licensed under the 0BSD license. This means that you can see this file as a placeholder and replace it with your own license.
-
-10. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
-
-11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
-
-12. **`README.md`**: A text file containing useful reference information about your project.
-
-## 🎓 Learning Gatsby
-
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.com/). Here are some places to start:
-
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.com/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
-
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.com/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
-
-## 💫 Deploy
-
-[Build, Deploy, and Host On The Only Cloud Built For Gatsby](https://www.gatsbyjs.com/products/cloud/)
-
-Gatsby Cloud is an end-to-end cloud platform specifically built for the Gatsby framework that combines a modern developer experience with an optimized, global edge network.
-
-<!-- AUTO-GENERATED-CONTENT:END -->
+To get the schema in GraphQL SDL format, you can use the following query:
+```bash
+curl --location --request GET 'https://<projectId>.api.sanity.io/v1//apis/graphql/<dataset>/<tag>' \
+--header 'Accept: application/graphql'
+```
+To get it in JSON format you can use the following query:
+```bash
+curl --location --request GET 'https://<projectId>.api.sanity.io/v1//apis/graphql/<dataset>/<tag>' \
+--header 'Accept: application/json'
+```
+We will probably not document this yet, as it's a subject for change at the moment. Keep that in mind. We are working on improving this down the road, though.

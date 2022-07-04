@@ -1,0 +1,44 @@
+{
+  "root": "apps/studio",
+  "sourceRoot": "apps/studio",
+  "projectType": "application",
+  "generators": {},
+  "targets": {
+    "dev": {
+      "executor": "nx:run-script",
+      "options": {
+        "script": "dev"
+      }
+    },
+    "build": {
+      "executor": "nx:run-script",
+      "options": {
+        "script": "build"
+      }
+    },
+    "test": {
+      "executor": "nx:run-script",
+      "options": {
+        "script": "test"
+      }
+    },
+    "graphql-deploy": {
+      "executor": "nx:run-script",
+      "options": {
+        "script": "graphql-deploy"
+      }
+    },
+    "format": {
+      "executor": "nx:run-script",
+      "options": {
+        "script": "format"
+      }
+    },
+    "lint": {
+      "executor": "nx:run-script",
+      "options": {
+        "script": "lint"
+      }
+    }
+  }
+}
