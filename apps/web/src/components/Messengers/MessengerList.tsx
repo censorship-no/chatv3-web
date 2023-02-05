@@ -97,7 +97,7 @@ function MessengerCard(props: MessengerCardProps) {
     setCurrentDeltaServer(code)
   }
 
-  const registerURL = currentServer!.matrixUrl!.replace('matrix.', 'https://chat.')
+  const registerURL = currentServer ? currentServer!.matrixUrl!.replace('matrix.', 'https://chat.'): ''
 
   return (<div className="card-item">
     {!!props.logo && <GatsbyImage
